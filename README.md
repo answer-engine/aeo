@@ -17,13 +17,22 @@
 
 <p align="center">
   <a href="https://github.com/answer-engine/aeo/stargazers">
-    <img src="https://img.shields.io/github/stars/answer-engine/aeo?style=flat-square&color=10b981" alt="Stars">
+    <img src="https://img.shields.io/github/stars/answer-engine/aeo?style=flat-square&color=10b981" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/answer-engine/aeo/network/members">
+    <img src="https://img.shields.io/github/forks/answer-engine/aeo?style=flat-square&color=10b981" alt="GitHub Forks">
+  </a>
+  <a href="https://github.com/answer-engine/aeo/issues">
+    <img src="https://img.shields.io/github/issues/answer-engine/aeo?style=flat-square&color=10b981" alt="GitHub Issues">
+  </a>
+  <a href="https://github.com/answer-engine/aeo/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/answer-engine/aeo?style=flat-square&color=10b981" alt="License">
   </a>
   <a href="https://github.com/answer-engine/aeo/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/answer-engine/aeo?style=flat-square&color=10b981" alt="Contributors">
   </a>
-  <a href="https://github.com/answer-engine/aeo/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/badge/license-MIT%20%2B%20CC%20BY%204.0-10b981?style=flat-square" alt="License">
+  <a href="https://answer-engine.slack.com">
+    <img src="https://img.shields.io/badge/Slack-Join%20Community-4A154B?style=flat-square&logo=slack" alt="Slack">
   </a>
 </p>
 
