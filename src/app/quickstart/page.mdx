@@ -1,0 +1,244 @@
+export const metadata = {
+  title: 'Quickstart Guide',
+  description: 'Get started with Answer Engine Optimization in under 10 minutes. Learn the fundamentals and implement your first AEO optimizations.',
+  openGraph: {
+    title: 'Quickstart Guide | AEO.dev',
+    description: 'Get started with Answer Engine Optimization in under 10 minutes. Learn the fundamentals and implement your first AEO optimizations.',
+    url: 'https://aeo.dev/quickstart',
+    siteName: 'AEO.dev',
+    images: [
+      {
+        url: '/images/website.png',
+        width: 1200,
+        height: 630,
+        alt: 'AEO Quickstart Guide',
+      },
+    ],
+    locale: 'en_US',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Quickstart Guide | AEO.dev',
+    description: 'Get started with Answer Engine Optimization in under 10 minutes. Learn the fundamentals and implement your first AEO optimizations.',
+    images: ['/images/website.png'],
+  },
+}
+
+# Quickstart Guide
+
+Get your website optimized for AI search engines in under 10 minutes. This guide walks you through the essential steps to make your content discoverable and citable by AI systems. {{ className: 'lead' }}
+
+<Note>
+  This quickstart covers the fundamentals. For comprehensive implementation, explore our detailed guides on each topic.
+</Note>
+
+## Step 1: Add llms.txt
+
+Create a `llms.txt` file in your website's root directory. This emerging standard helps AI systems understand your site:
+
+```txt
+# llms.txt
+site_name: Your Site Name
+site_url: https://yoursite.com
+site_description: A brief description of what your site offers
+
+# Permissions
+llm_inference: allow
+llm_training: allow
+rag_usage: allow
+
+# Key entry points
+documentation_root: https://yoursite.com/docs
+api_reference: https://yoursite.com/api
+
+# Topics covered
+topics:
+  - Topic 1
+  - Topic 2
+  - Topic 3
+```
+
+<div className="not-prose">
+  <Button href="/optimization/llms-txt" variant="text" arrow="right">
+    Learn more about llms.txt
+  </Button>
+</div>
+
+## Step 2: Implement Basic Schema.org
+
+Add JSON-LD structured data to your pages. At minimum, add Organization and WebSite schemas:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Your Site Name",
+  "url": "https://yoursite.com",
+  "description": "Your site description"
+}
+</script>
+```
+
+For articles and blog posts:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Article Title",
+  "description": "Article description",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  },
+  "datePublished": "2026-01-05",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Site Name"
+  }
+}
+</script>
+```
+
+<div className="not-prose">
+  <Button href="/optimization/schema" variant="text" arrow="right">
+    Full Schema.org guide
+  </Button>
+</div>
+
+## Step 3: Configure robots.txt for AI Crawlers
+
+Ensure AI crawlers can access your content. Update your `robots.txt`:
+
+```txt
+# Allow all AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# General allow
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yoursite.com/sitemap.xml
+```
+
+<Note>
+  You can selectively block AI crawlers if you don't want your content used for training. See our [robots guide](/technical/robots-crawlers) for details.
+</Note>
+
+## Step 4: Structure Your Content
+
+AI systems understand well-structured content better. Follow these principles:
+
+### Use Semantic HTML
+
+```html
+<article>
+  <header>
+    <h1>Main Title</h1>
+    <p class="lead">Introduction paragraph...</p>
+  </header>
+  
+  <section>
+    <h2>Section Title</h2>
+    <p>Content...</p>
+  </section>
+  
+  <section>
+    <h2>Another Section</h2>
+    <p>More content...</p>
+  </section>
+</article>
+```
+
+### Clear Heading Hierarchy
+
+- One `<h1>` per page (the main topic)
+- `<h2>` for major sections
+- `<h3>` for subsections
+- Don't skip levels (h1 → h3)
+
+### Answer Questions Directly
+
+Structure content to directly answer common questions:
+
+```markdown
+## What is [Topic]?
+
+[Topic] is [clear, concise definition]. It's used for [primary use case].
+
+## How does [Topic] work?
+
+[Topic] works by [step-by-step explanation]:
+
+1. First step
+2. Second step
+3. Third step
+```
+
+## Step 5: Add Metadata
+
+Ensure every page has complete metadata:
+
+```html
+<head>
+  <title>Page Title | Site Name</title>
+  <meta name="description" content="Clear, informative description of the page content">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Page Title">
+  <meta property="og:description" content="Description">
+  <meta property="og:type" content="article">
+  
+  <!-- Author info (important for E-E-A-T) -->
+  <meta name="author" content="Author Name">
+</head>
+```
+
+## Verification Checklist
+
+Use this checklist to verify your AEO implementation:
+
+- [ ] `llms.txt` file exists at site root
+- [ ] JSON-LD structured data on key pages
+- [ ] `robots.txt` allows AI crawlers
+- [ ] Semantic HTML structure throughout
+- [ ] Clear heading hierarchy
+- [ ] Complete meta descriptions
+- [ ] Author attribution on articles
+- [ ] Sitemap.xml is current and accessible
+
+## Test Your Implementation
+
+Use our Chrome extension to analyze your AEO readiness:
+
+<div className="not-prose">
+  <Button href="/tools/chrome-extension" arrow="right">
+    Get the Chrome Extension
+  </Button>
+</div>
+
+## Next Steps
+
+Now that you have the basics in place:
+
+- [Learn about AI Search Engines](/ai-search/overview) — Understand how different AI systems work
+- [Content Structure Deep Dive](/optimization/content-structure) — Advanced structuring techniques
+- [Structured Data Guide](/optimization/schema) — Comprehensive Schema.org implementation
+- [Best Practices](/resources/best-practices) — Proven strategies for AEO success

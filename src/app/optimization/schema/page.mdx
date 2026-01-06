@@ -1,0 +1,332 @@
+export const metadata = {
+  title: 'Schema.org & JSON-LD for AEO',
+  description: 'How to use Schema.org structured data and JSON-LD to improve your content visibility in AI search engines and LLM responses.',
+  openGraph: {
+    title: 'Schema.org & JSON-LD for AEO | AEO.dev',
+    description: 'How to use Schema.org structured data and JSON-LD to improve your content visibility in AI search engines and LLM responses.',
+    url: 'https://aeo.dev/optimization/schema',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'Schema.org & JSON-LD' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# Schema.org & JSON-LD for AEO
+
+Schema.org markup may not be glamorous, but ignoring it is like showing up to a networking event without business cards. While AI systems don't directly parse your schema in real-time, structured data significantly influences how your content is understood and cited. {{ className: 'lead' }}
+
+## How Schema Actually Works with AI
+
+### The Reality
+
+ChatGPT isn't sitting there parsing your website's schema in real-time. But here's what actually happens:
+
+**1. Training Data Quality**
+When AI models get trained on internet data, well-structured content gets understood correctly. Poorly structured content is harder to interpret accurately. Search engines leverage Schema Markup and knowledge graphs as data sources to train machines.
+
+**2. Search Integration**
+As AI tools browse the web in real-time, they look for clear, structured information. AI Overviews trigger for 15-30% of all queries and reach more than 1 billion global users monthly. Schema is your content wearing a name tag.
+
+**3. Knowledge Graphs**
+Big tech companies use schema to build their knowledge databases—and that's what AI systems reference when they need facts.
+
+## The Numbers Behind Schema
+
+| Metric | Value |
+|--------|-------|
+| Websites using Schema | 45+ million domains |
+| Schema objects on web | 450+ billion |
+| Sites on Google page 1 with schema | 72% |
+| Rich result CTR vs standard | 58% vs 41% |
+
+## Schema Types That Matter for AEO
+
+### Organization Schema
+
+Tells AI systems you're a real company:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Your Company Name",
+  "url": "https://yourdomain.com",
+  "logo": "https://yourdomain.com/logo.png",
+  "description": "What your company does",
+  "foundingDate": "2020-01-01",
+  "founder": {
+    "@type": "Person",
+    "name": "Founder Name"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "contact@yourdomain.com"
+  },
+  "sameAs": [
+    "https://twitter.com/yourcompany",
+    "https://linkedin.com/company/yourcompany"
+  ]
+}
+```
+
+### Article Schema
+
+For content pages—tells AI you know what you're talking about:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Your Article Title",
+  "description": "Brief description of the article",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name",
+    "url": "https://yourdomain.com/author/name",
+    "jobTitle": "Expert Title"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Company",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yourdomain.com/logo.png"
+    }
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-01-05",
+  "mainEntityOfPage": "https://yourdomain.com/article"
+}
+```
+
+### Product Schema
+
+Helps AI recommend your products:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Product Name",
+  "description": "Product description",
+  "brand": {
+    "@type": "Brand",
+    "name": "Your Brand"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "99.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "100"
+  }
+}
+```
+
+### FAQPage Schema
+
+Positions you as the go-to expert for questions:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer Engine Optimization (AEO) is the practice of optimizing content for visibility in AI-powered search engines and LLM responses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does AEO matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AEO matters because AI search engines are rapidly growing, with ChatGPT now among the top 10 websites globally."
+      }
+    }
+  ]
+}
+```
+
+### Review Schema
+
+Provides structured social proof:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "Product Name"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Reviewer Name"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "Review content here"
+}
+```
+
+### HowTo Schema
+
+For instructional content:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Implement AEO",
+  "description": "Step-by-step guide to AEO implementation",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Audit current visibility",
+      "text": "Test your brand visibility across AI platforms"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Implement structured data",
+      "text": "Add Schema.org markup to your pages"
+    }
+  ]
+}
+```
+
+## Implementation Best Practices
+
+### 1. Use JSON-LD Format
+
+JSON-LD is the recommended format for structured data:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Page Title"
+}
+</script>
+```
+
+**Why JSON-LD:**
+- Cleanly separated from HTML
+- Easy to generate programmatically
+- Doesn't affect page rendering
+- Preferred by Google
+
+### 2. Validate Your Schema
+
+Use these tools to check your markup:
+- [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [Schema.org Validator](https://validator.schema.org/)
+- [JSON-LD Playground](https://json-ld.org/playground/)
+
+### 3. Keep It Accurate
+
+Schema must match visible content:
+- Don't markup hidden content
+- Prices must be accurate
+- Reviews must be real
+- Authors must be genuine
+
+### 4. Implement Server-Side
+
+**Do this:**
+```html
+<!-- In your HTML template -->
+<script type="application/ld+json">
+  {{ jsonLdSchema | safe }}
+</script>
+```
+
+**Not this:**
+```javascript
+// JavaScript-injected schema may not be crawled
+document.write('<script type="application/ld+json">...');
+```
+
+## Prioritizing Schema Implementation
+
+### Priority 1: Foundation
+
+- Organization schema on homepage
+- WebSite schema on homepage
+- Article/BlogPosting on all content
+
+### Priority 2: Enhanced
+
+- FAQPage for FAQ content
+- HowTo for instructional content
+- Product for product pages
+
+### Priority 3: Advanced
+
+- BreadcrumbList for navigation
+- VideoObject for video content
+- Event for events
+- LocalBusiness for local SEO
+
+## Should You Bother? (Yes)
+
+### The Case for Schema
+
+**It's insurance:** When AI gets smarter (and it will), you'll be ready
+
+**Competitive moat:** Only 72% of sites on Google's first page use schema markup
+
+**Search benefits:** 58% of users click on rich results vs only 41% for regular results
+
+**Professionalism:** Well-structured data demonstrates technical competence
+
+### The Uncomfortable Reality
+
+Schema isn't going to magically make ChatGPT mention your startup in every conversation. Current AI models don't directly read your markup in real-time.
+
+But structured data:
+- Makes your content machine-readable
+- Improves how training data interprets your site
+- Supports traditional SEO (which correlates with AI visibility)
+- Future-proofs your content
+
+## Common Mistakes
+
+### ❌ Invisible Content Markup
+
+Don't mark up content users can't see.
+
+### ❌ Fake Reviews
+
+Schema for non-existent reviews is spam.
+
+### ❌ Wrong Schema Types
+
+Using Product schema for a service, or Article for a product page.
+
+### ❌ Duplicate/Conflicting Schema
+
+Multiple conflicting schemas confuse parsers.
+
+### ❌ JavaScript-Only Schema
+
+Schema injected via JavaScript may not be seen by AI crawlers.
+
+## Next Steps
+
+Continue with [AI-Friendly Metadata](/optimization/metadata) or explore [Advanced Structured Data](/technical/structured-data).
+

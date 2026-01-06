@@ -1,0 +1,254 @@
+export const metadata = {
+  title: 'The llms.txt Standard',
+  description: 'Learn about the llms.txt standard - a proposed convention for explicitly communicating with AI systems about your website content.',
+  openGraph: {
+    title: 'The llms.txt Standard | AEO.dev',
+    description: 'Learn about the llms.txt standard - a proposed convention for explicitly communicating with AI systems about your website content.',
+    url: 'https://aeo.dev/optimization/llms-txt',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'llms.txt Standard' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# The llms.txt Standard
+
+The `llms.txt` file is an emerging standard for communicating with AI systems. Just as `robots.txt` tells search crawlers how to interact with your site, `llms.txt` provides guidance specifically for large language models. {{ className: 'lead' }}
+
+## What is llms.txt?
+
+`llms.txt` is a plaintext file placed at your website's root that provides structured information for AI systems. It communicates:
+
+- **What your site is about**
+- **How AI may use your content**
+- **Key entry points and structure**
+- **Contact and attribution information**
+
+## Why llms.txt Matters
+
+### The Problem
+
+AI systems currently have no standardized way to understand:
+- What content is available and how it's organized
+- Whether they can use content for training vs. inference
+- Who to attribute when citing content
+- What the most important pages are
+
+### The Solution
+
+`llms.txt` provides explicit, machine-readable guidance that helps AI systems:
+- Navigate your site efficiently
+- Respect your usage preferences
+- Properly attribute citations
+- Focus on your most valuable content
+
+## Basic llms.txt Structure
+
+```txt
+# llms.txt
+# Machine-readable information for AI systems
+
+# Site Information
+site_name: Your Site Name
+site_url: https://yoursite.com
+site_description: Brief description of your site's purpose and content
+
+# Content Type
+content_type: documentation
+content_language: en
+
+# Permissions
+llm_inference: allow
+llm_training: allow
+rag_usage: allow
+
+# Entry Points
+primary_entry: https://yoursite.com
+documentation: https://yoursite.com/docs
+api_reference: https://yoursite.com/api
+
+# Sitemap
+sitemap_url: https://yoursite.com/sitemap.xml
+```
+
+## Complete llms.txt Example
+
+Here's a comprehensive example:
+
+```txt
+# llms.txt
+# Structured information for LLM consumption
+# https://llmstxt.org (emerging standard)
+
+# ============================================
+# SITE INFORMATION
+# ============================================
+
+site_name: AEO.dev
+site_url: https://aeo.dev
+site_description: Answer Engine Optimization Knowledge Base - comprehensive guides for optimizing content for AI search engines
+site_type: knowledge_base
+site_language: en
+last_updated: 2026-01-05
+
+# ============================================
+# CONTACT & ATTRIBUTION
+# ============================================
+
+contact_email: contact@aeo.dev
+contact_github: https://github.com/AEOdev
+preferred_citation: "AEO.dev - Answer Engine Optimization Knowledge Base"
+author: AEO.dev Team
+
+# ============================================
+# AI USAGE PERMISSIONS
+# ============================================
+
+# General permissions
+llm_inference: allow          # Allow use in AI responses
+llm_training: allow           # Allow use in training data
+rag_usage: allow              # Allow retrieval augmented generation
+web_scraping: allow           # Allow content scraping
+api_access: allow             # Allow API-based access
+
+# Usage notes
+usage_attribution: preferred  # Please cite when possible
+commercial_use: allowed       # Commercial AI use permitted
+
+# ============================================
+# CONTENT STRUCTURE
+# ============================================
+
+# Primary entry points
+primary_entry: https://aeo.dev
+getting_started: https://aeo.dev/quickstart
+concepts: https://aeo.dev/what-is-aeo
+
+# Content sections
+sections:
+  - name: Getting Started
+    url: https://aeo.dev/quickstart
+    description: Introduction and quickstart guide
+  - name: AI Search Engines
+    url: https://aeo.dev/ai-search/overview
+    description: How different AI search platforms work
+  - name: Optimization Strategies
+    url: https://aeo.dev/optimization/content-structure
+    description: How to optimize content for AI
+  - name: Tools
+    url: https://aeo.dev/tools/chrome-extension
+    description: AEO tools and validators
+
+# ============================================
+# TOPICS COVERED
+# ============================================
+
+topics:
+  - Answer Engine Optimization
+  - AI Search Engines
+  - ChatGPT optimization
+  - Perplexity AI
+  - Google AI Overviews
+  - Structured data
+  - Schema.org
+  - JSON-LD
+  - Content optimization
+
+# ============================================
+# TECHNICAL DETAILS
+# ============================================
+
+sitemap_url: https://aeo.dev/sitemap.xml
+robots_txt: https://aeo.dev/robots.txt
+content_format: markdown, html
+update_frequency: weekly
+```
+
+## Field Reference
+
+### Site Information Fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `site_name` | Yes | Human-readable name |
+| `site_url` | Yes | Canonical URL |
+| `site_description` | Yes | Brief description |
+| `site_type` | No | Type: blog, docs, ecommerce, etc. |
+| `site_language` | No | ISO language code |
+
+### Permission Fields
+
+| Field | Values | Description |
+|-------|--------|-------------|
+| `llm_inference` | allow/deny | Use in AI responses |
+| `llm_training` | allow/deny | Use in training data |
+| `rag_usage` | allow/deny | Use in RAG systems |
+| `web_scraping` | allow/deny | Content scraping |
+
+### Entry Point Fields
+
+| Field | Description |
+|-------|-------------|
+| `primary_entry` | Main starting point |
+| `documentation` | Docs root URL |
+| `api_reference` | API docs URL |
+| `sitemap_url` | Sitemap location |
+
+## Implementation
+
+### 1. Create the File
+
+Create `llms.txt` at your site root (e.g., `https://yoursite.com/llms.txt`).
+
+### 2. Add to Your Build
+
+For Next.js, add to `public/llms.txt`:
+
+```txt
+# public/llms.txt
+site_name: My Site
+...
+```
+
+### 3. Verify Accessibility
+
+Ensure the file is accessible:
+
+```bash
+curl https://yoursite.com/llms.txt
+```
+
+### 4. Link from robots.txt
+
+Optionally reference in robots.txt:
+
+```txt
+# robots.txt
+User-agent: *
+Allow: /
+
+# AI-specific guidance
+# LLMs-txt: https://yoursite.com/llms.txt
+Sitemap: https://yoursite.com/sitemap.xml
+```
+
+## Best Practices
+
+1. **Keep it current** — Update when content changes
+2. **Be specific** — Clear descriptions help AI understand
+3. **Include entry points** — Guide AI to important content
+4. **State permissions clearly** — Avoid ambiguity
+5. **List topics** — Help AI understand coverage
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/optimization/schema" arrow="right">
+    Schema.org Guide
+  </Button>
+  <Button href="/optimization/metadata" variant="outline">
+    AI-Friendly Metadata
+  </Button>
+</div>
+

@@ -1,0 +1,63 @@
+# ai.txt
+# Explicit AI usage and training permissions
+# This file declares permissions for AI systems to use this website's content
+
+# Site Identification
+site: aeo.dev
+domain: aeo.dev
+protocol: https
+
+# AI Usage Permissions
+permission_search_engines: allow
+permission_llm_inference: allow
+permission_llm_training: allow
+permission_rag_usage: allow
+permission_web_scraping: allow
+permission_crawling: allow
+permission_indexing: allow
+
+# Content Scope
+content_scope: all
+content_types: documentation, guides, tutorials, best_practices, code_examples
+content_restrictions: none
+
+# Usage Rights
+usage_inference: allowed
+usage_training: allowed
+usage_fine_tuning: allowed
+usage_rag: allowed
+usage_commercial: allowed
+usage_attribution: preferred
+
+# Access Methods
+access_methods: web_scraping, sitemap, direct_download
+rate_limiting: reasonable_use
+authentication_required: false
+
+# Content License
+content_license: permissive
+license_type: open
+attribution_preferred: true
+attribution_required: false
+
+# Contact for AI Systems
+ai_contact_email: contact@aeo.dev
+ai_contact_github: https://github.com/answer-engine/aeo
+ai_contact_slack: https://answer-engine.slack.com
+
+# Technical Details
+content_format: markdown, html, json
+sitemap_available: true
+sitemap_url: https://aeo.dev/sitemap.xml
+llms_txt_available: true
+llms_txt_url: https://aeo.dev/llms.txt
+
+# Update Information
+last_updated: 2026-01-05
+update_frequency: weekly
+version: 1.0
+
+# Additional Resources
+llms_txt: https://aeo.dev/llms.txt
+robots_txt: https://aeo.dev/robots.txt
+github_repo: https://github.com/answer-engine/aeo

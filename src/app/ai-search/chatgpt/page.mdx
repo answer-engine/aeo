@@ -1,0 +1,258 @@
+export const metadata = {
+  title: 'ChatGPT Search Optimization',
+  description: 'Learn how to optimize your content for ChatGPT Search (SearchGPT) and understand how it processes queries and selects sources.',
+  openGraph: {
+    title: 'ChatGPT Search Optimization | AEO.dev',
+    description: 'Learn how to optimize your content for ChatGPT Search (SearchGPT) and understand how it processes queries and selects sources.',
+    url: 'https://aeo.dev/ai-search/chatgpt',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'ChatGPT Search Optimization' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# ChatGPT Search Optimization
+
+ChatGPT Search (formerly SearchGPT) represents one of the most significant developments in AI-powered search. Understanding how it works and optimizing for it is essential for modern content visibility. {{ className: 'lead' }}
+
+## ChatGPT by the Numbers
+
+ChatGPT is now among the **top 10 websites globally**:
+
+| Metric | Value |
+|--------|-------|
+| Monthly visits | ~4 billion |
+| Market share vs Google | ~5% |
+| Monthly growth | 5-15% |
+| Unique domains receiving traffic | 900,000+ (per month) |
+
+This represents the first serious alternative to Google search in 25 years.
+
+## How ChatGPT Search Works
+
+ChatGPT Search combines OpenAI's GPT models with real-time web browsing capabilities:
+
+### When Web Search is Triggered
+
+Research shows:
+- **~50% of queries** trigger the search feature
+- **Shorter, keyword-style prompts** more likely to activate search
+- **Longer prompts** (~23+ words) often rely on internal knowledge only
+
+### The Search Process
+
+1. **Query analysis** — ChatGPT interprets the user's intent
+2. **Search decision** — Determines if real-time information is needed
+3. **Web search** — Executes search query (powered by Bing index)
+4. **Source selection** — Chooses relevant pages to process
+5. **Content scraping** — Reads selected source content
+6. **Response synthesis** — Generates answer using sources + knowledge
+
+## Optimizing Content for ChatGPT
+
+### 1. Content Structure
+
+ChatGPT parses content better when it's well-structured:
+
+```markdown
+## Clear, Descriptive Headings
+
+Lead with the key information in the first paragraph.
+
+### Supporting Subheadings
+
+Use bullet points for lists:
+- Point one with specific detail
+- Point two with data
+- Point three with context
+
+### Include Summaries
+
+End sections with clear takeaways.
+```
+
+### 2. Authority Signals
+
+ChatGPT prioritizes authoritative content:
+
+- **Author credentials** — Clear expertise indicators
+- **Citations** — References to reputable sources
+- **Data and statistics** — Specific, verifiable numbers
+- **Expert quotes** — Perspectives from recognized authorities
+
+### 3. Comprehensive Coverage
+
+ChatGPT values complete answers:
+
+- Cover topics thoroughly
+- Address related questions
+- Include context and background
+- Provide actionable information
+
+### 4. Citation-Worthy Content
+
+Make your content worth citing:
+
+- Unique insights and analysis
+- Original research and data
+- Expert perspectives
+- Comprehensive guides
+
+## ChatGPT's Relationship with Bing
+
+ChatGPT Search uses **Bing's search index** for web results. This means:
+
+- Bing SEO factors influence ChatGPT search visibility
+- Content indexed by Bing is accessible to ChatGPT
+- Bing's ranking signals matter for source selection
+
+### Bing Optimization Tips
+
+- Ensure content is indexed in Bing
+- Submit sitemap to Bing Webmaster Tools
+- Follow Bing's content guidelines
+- Monitor Bing-specific rankings
+
+## Technical Optimization
+
+### Allow GPTBot Access
+
+Ensure your robots.txt allows ChatGPT's crawler:
+
+```txt
+# Allow GPTBot
+User-agent: GPTBot
+Allow: /
+
+# Or at minimum, don't block it
+User-agent: GPTBot
+# No Disallow = allowed
+```
+
+### Structured Data for ChatGPT
+
+Implement Schema.org markup:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Your Article Title",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name",
+    "jobTitle": "Expert Title"
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-01-05"
+}
+```
+
+## Measuring ChatGPT Traffic
+
+### Google Analytics Setup
+
+Track ChatGPT referrals in GA4:
+
+1. **Create a custom channel group** for AI traffic
+2. **Use this regex** to identify ChatGPT traffic (see below)
+3. **Monitor trends** over time
+
+**Regex pattern for ChatGPT traffic:**
+
+```text
+^.*openai.*|.*chatgpt.*$
+```
+
+### Key Metrics to Track
+
+- Referral traffic from ChatGPT domains
+- Pages receiving ChatGPT traffic
+- Conversion rate from ChatGPT visitors
+- Time on site and engagement
+
+## Content Strategy for ChatGPT
+
+### Answer Common Questions
+
+ChatGPT excels at answering questions. Structure content to match:
+
+```markdown
+## What is [Topic]?
+
+[Direct answer in first paragraph]
+
+[Additional context and detail]
+
+## How does [Topic] work?
+
+[Clear explanation with steps]
+
+## Why is [Topic] important?
+
+[Benefits and reasons]
+```
+
+### Provide Unique Value
+
+ChatGPT is more likely to cite content that offers:
+
+- **Original research** — Data others don't have
+- **Expert insights** — Perspectives from authorities
+- **Practical guidance** — Actionable how-to information
+- **Comprehensive coverage** — Complete topic treatment
+
+### Include Statistics and Data
+
+Research shows statistics significantly improve citation rates:
+
+```markdown
+According to recent data:
+- **68%** of users prefer AI-generated summaries
+- **4 billion** monthly ChatGPT visits
+- **5-15%** month-over-month growth
+
+These statistics demonstrate...
+```
+
+## Common Mistakes to Avoid
+
+### ❌ Thin Content
+
+Brief, surface-level content rarely gets cited. Provide depth.
+
+### ❌ Blocked Crawlers
+
+Blocking GPTBot removes you from ChatGPT's reach entirely.
+
+### ❌ No Author Attribution
+
+Anonymous content lacks the authority signals ChatGPT values.
+
+### ❌ Outdated Information
+
+ChatGPT Search accesses real-time information—keep content current.
+
+### ❌ Keyword Stuffing
+
+ChatGPT understands semantic meaning. Write naturally.
+
+## OpenAI Partnerships
+
+OpenAI has partnerships with numerous content providers whose content may receive preferential treatment:
+
+- Associated Press (AP)
+- Financial Times
+- News Corp
+- Axel Springer
+- Stack Overflow
+- Reddit
+- And many more
+
+Being mentioned in these publications may increase your visibility in ChatGPT responses.
+
+## Next Steps
+
+Continue with [Google AI Overviews](/ai-search/google-ai) or learn about [Quotes & Statistics](/strategies/quotes-statistics).
+

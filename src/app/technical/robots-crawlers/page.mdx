@@ -1,0 +1,318 @@
+export const metadata = {
+  title: 'AI Robots & Crawlers',
+  description: 'Complete guide to managing AI bot access with robots.txt and llms.txt. Learn about GPTBot, ClaudeBot, PerplexityBot, and more.',
+  openGraph: {
+    title: 'AI Robots & Crawlers | AEO.dev',
+    description: 'Complete guide to managing AI bot access with robots.txt and llms.txt. Learn about GPTBot, ClaudeBot, PerplexityBot, and more.',
+    url: 'https://aeo.dev/technical/robots-crawlers',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AI Robots & Crawlers' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# AI Robots & Crawlers
+
+Managing AI bot access to your content is a critical part of AEO. Understanding how different AI crawlers work and properly configuring your robots.txt and llms.txt files can significantly impact your visibility. {{ className: 'lead' }}
+
+## The New Crawler Landscape
+
+In the early years of search engines, many media companies locked out Google's indexing bots—a decision many came to regret. Today, the same pattern is emerging with AI crawlers.
+
+**Key question:** Can you afford to stay invisible to AI?
+
+### Known AI Crawlers
+
+| Bot Name | Company | Purpose |
+|----------|---------|---------|
+| GPTBot | OpenAI | ChatGPT training and search |
+| ChatGPT-User | OpenAI | Real-time browsing |
+| ClaudeBot | Anthropic | Claude training |
+| PerplexityBot | Perplexity | Search indexing |
+| Googlebot | Google | Including Gemini/AI Overview |
+| Bingbot | Microsoft | Including Copilot |
+| CCBot | Common Crawl | General training data |
+| Applebot | Apple | Siri and AI features |
+| cohere-ai | Cohere | LLM training |
+| FacebookBot | Meta | AI training |
+
+## robots.txt Configuration
+
+### Allowing AI Crawlers
+
+To maximize AI visibility, allow all major AI bots:
+
+```txt
+# Allow all AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+```
+
+### Selective Access
+
+If you want to allow AI search but block training:
+
+```txt
+# Allow real-time search browsing
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Block training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+```
+
+### Protecting Specific Content
+
+Block sensitive areas while allowing general access:
+
+```txt
+User-agent: GPTBot
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+```
+
+## The llms.txt Standard
+
+llms.txt is a new standard specifically designed for LLM crawlers—similar to what robots.txt does for search engines.
+
+### Basic llms.txt Structure
+
+```txt
+# Site Information
+site_name: Your Site Name
+site_url: https://yourdomain.com
+site_description: Brief description of your site
+
+# Contact
+contact_email: contact@yourdomain.com
+
+# Entry Points
+primary_entry: https://yourdomain.com
+documentation_root: https://yourdomain.com/docs
+api_documentation: https://yourdomain.com/api
+
+# Sitemap
+sitemap_url: https://yourdomain.com/sitemap.xml
+
+# Sections
+sections:
+  - Getting Started: /docs/getting-started
+  - API Reference: /api
+  - Guides: /guides
+```
+
+### llms.txt Best Practices
+
+1. **Place at site root** — /llms.txt
+2. **Keep updated** — Reflect current site structure
+3. **Include key entry points** — Help AI find important content
+4. **Describe your site clearly** — Help AI understand context
+
+<div className="not-prose">
+  <Button href="/optimization/llms-txt" variant="text" arrow="right">
+    Complete llms.txt Guide
+  </Button>
+</div>
+
+## Technical Crawling Challenges for AI
+
+### JavaScript Rendering Issues
+
+AI crawlers have limitations compared to traditional search crawlers:
+
+**What AI crawlers struggle with:**
+- JavaScript-rendered content
+- Dynamic content loading
+- Single Page Application (SPA) content
+- Third-party scripts (like Google Tag Manager)
+- Client-side routing
+
+### The Problem
+
+```javascript
+// This content may not be visible to AI crawlers
+useEffect(() => {
+  fetch('/api/content')
+    .then(res => res.json())
+    .then(data => setContent(data));
+}, []);
+```
+
+### Solutions
+
+**Server-Side Rendering (SSR):**
+```javascript
+// Next.js example - content rendered server-side
+export async function getServerSideProps() {
+  const content = await fetchContent();
+  return { props: { content } };
+}
+```
+
+**Static Generation:**
+```javascript
+// Next.js example - content generated at build time
+export async function getStaticProps() {
+  const content = await fetchContent();
+  return { props: { content } };
+}
+```
+
+**Progressive Enhancement:**
+- Serve core content as HTML
+- Enhance with JavaScript
+- Ensure content works without JS
+
+## JSON-LD and AI Crawlers
+
+JSON-LD structured data is increasingly important for AI visibility:
+
+### Why JSON-LD Matters
+
+- Provides clean, structured context
+- Helps AI understand entities and relationships
+- Works without JavaScript execution
+- Machine-readable format
+
+### Ensuring JSON-LD is Accessible
+
+```html
+<!-- Include in HTML head - doesn't require JS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Your Company",
+  "url": "https://yourdomain.com"
+}
+</script>
+```
+
+**Avoid:** Injecting JSON-LD via JavaScript
+
+```javascript
+// This may not be seen by AI crawlers
+document.head.innerHTML += `
+  <script type="application/ld+json">
+    ${JSON.stringify(schema)}
+  </script>
+`;
+```
+
+## Verifying Crawler Access
+
+### Testing Your Configuration
+
+1. **Use robots.txt testers** — Verify rules work as intended
+2. **Check server logs** — Look for AI bot visits
+3. **Manual testing** — Query AI platforms and check citations
+4. **Structured data validators** — Ensure markup is valid
+
+### Server Log Analysis
+
+Look for these user agents in logs:
+```
+GPTBot/1.0
+ClaudeBot/1.0
+PerplexityBot/1.0
+```
+
+### Common Issues
+
+| Issue | Symptom | Solution |
+|-------|---------|----------|
+| Blocked crawlers | No AI platform traffic | Check robots.txt |
+| JS-only content | Content not cited | Implement SSR |
+| Slow responses | Incomplete crawling | Optimize performance |
+| Invalid schema | Reduced visibility | Validate structured data |
+
+## Content Delivery Considerations
+
+### CDN and Caching
+
+Ensure AI crawlers receive cacheable, consistent responses:
+
+```
+Cache-Control: public, max-age=3600
+```
+
+### Rate Limiting
+
+Be careful not to rate-limit AI bots:
+- Whitelist known AI crawler IPs
+- Use appropriate rate limits
+- Monitor for crawl errors
+
+### Geographic Restrictions
+
+If using geo-restrictions:
+- Consider crawler origin locations
+- Whitelist crawler IP ranges
+- Test from multiple locations
+
+## Future Considerations
+
+The AI crawler landscape is evolving rapidly:
+
+- **New bots emerge regularly** — Monitor announcements
+- **Standards are developing** — llms.txt may evolve
+- **Regulations vary** — EU AI Act affects some crawlers
+- **Best practices change** — Stay current with developments
+
+## Action Checklist
+
+- [ ] Audit current robots.txt for AI bot rules
+- [ ] Create/update llms.txt file
+- [ ] Test JavaScript rendering accessibility
+- [ ] Verify JSON-LD is in static HTML
+- [ ] Check server logs for AI crawler visits
+- [ ] Monitor AI platform citations
+- [ ] Keep crawler rules updated
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/technical/api-accessibility" arrow="right">
+    API Accessibility
+  </Button>
+  <Button href="/optimization/llms-txt" variant="outline">
+    llms.txt Guide
+  </Button>
+</div>
+

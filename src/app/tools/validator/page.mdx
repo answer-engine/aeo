@@ -1,0 +1,204 @@
+export const metadata = {
+  title: 'AEO Validator',
+  description: 'Validate your website\'s AEO implementation against best practices. Check structured data, llms.txt, and content structure.',
+  openGraph: {
+    title: 'AEO Validator | AEO.dev',
+    description: 'Validate your website\'s AEO implementation against best practices. Check structured data, llms.txt, and content structure.',
+    url: 'https://aeo.dev/tools/validator',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AEO Validator' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# AEO Validator
+
+Check your website's Answer Engine Optimization implementation against best practices. Our validator analyzes structured data, llms.txt configuration, and content structure. {{ className: 'lead' }}
+
+<Note>
+  The online validator is coming soon. In the meantime, use the manual validation steps below.
+</Note>
+
+## What We Validate
+
+### Structured Data
+- Schema.org markup presence and validity
+- JSON-LD syntax correctness
+- Required fields completeness
+- Type appropriateness
+
+### llms.txt
+- File accessibility
+- Field completeness
+- Syntax validity
+- Best practice compliance
+
+### robots.txt
+- AI crawler permissions
+- Sitemap reference
+- Syntax correctness
+
+### Content Structure
+- Heading hierarchy
+- Semantic HTML usage
+- Meta tag completeness
+- Authority signals
+
+## Manual Validation Guide
+
+While our automated validator is in development, use these tools:
+
+### Step 1: Validate Structured Data
+
+**Google Rich Results Test**
+
+1. Go to [search.google.com/test/rich-results](https://search.google.com/test/rich-results)
+2. Enter your page URL
+3. Review detected schemas
+4. Fix any errors or warnings
+
+**Schema.org Validator**
+
+1. Go to [validator.schema.org](https://validator.schema.org)
+2. Paste your JSON-LD or enter URL
+3. Review validation results
+
+### Step 2: Check llms.txt
+
+**Manual Check**
+
+```bash
+# Check if llms.txt exists
+curl -I https://yoursite.com/llms.txt
+
+# View contents
+curl https://yoursite.com/llms.txt
+```
+
+**Checklist:**
+- [ ] File returns 200 status
+- [ ] Content-Type is text/plain
+- [ ] `site_name` field present
+- [ ] `site_url` field present
+- [ ] `site_description` field present
+- [ ] Permission fields specified
+- [ ] Entry points listed
+
+### Step 3: Verify robots.txt
+
+```bash
+curl https://yoursite.com/robots.txt
+```
+
+**Checklist:**
+- [ ] GPTBot is allowed (or explicitly configured)
+- [ ] Google-Extended is allowed
+- [ ] PerplexityBot is allowed
+- [ ] ClaudeBot is allowed
+- [ ] Sitemap URL is listed
+
+### Step 4: Analyze Content Structure
+
+**Using DevTools:**
+
+1. Open page in Chrome
+2. Press F12 for DevTools
+3. Go to Elements tab
+4. Search for headings: `h1, h2, h3`
+
+**Checklist:**
+- [ ] Single H1 per page
+- [ ] Logical heading hierarchy (no skipped levels)
+- [ ] Descriptive heading text
+- [ ] `<article>` wrapping main content
+- [ ] `<section>` for major divisions
+
+### Step 5: Check Meta Tags
+
+**Using DevTools:**
+
+```javascript
+// Run in browser console
+console.log('Title:', document.title);
+console.log('Description:', document.querySelector('meta[name="description"]')?.content);
+console.log('Author:', document.querySelector('meta[name="author"]')?.content);
+console.log('OG Title:', document.querySelector('meta[property="og:title"]')?.content);
+```
+
+## Validation Checklist
+
+Use this comprehensive checklist for manual validation:
+
+### Essential (Required)
+
+- [ ] Page has valid HTML structure
+- [ ] Single H1 heading present
+- [ ] Meta description exists
+- [ ] robots.txt allows AI crawlers
+- [ ] Sitemap.xml exists and is valid
+
+### Recommended
+
+- [ ] llms.txt file at site root
+- [ ] Schema.org Article/WebPage markup
+- [ ] Author information present
+- [ ] Publication date included
+- [ ] Open Graph meta tags
+
+### Advanced
+
+- [ ] FAQ schema for Q&A content
+- [ ] HowTo schema for tutorials
+- [ ] Organization schema on homepage
+- [ ] BreadcrumbList for navigation
+- [ ] Inter-page entity references
+
+## Common Issues
+
+### "No structured data detected"
+
+**Cause:** JSON-LD script not present or malformed
+
+**Fix:**
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Page Title",
+  "description": "Page description"
+}
+</script>
+```
+
+### "llms.txt not found"
+
+**Cause:** File missing or wrong location
+
+**Fix:** Create `llms.txt` in your site's root directory (public folder for Next.js)
+
+### "AI crawlers blocked"
+
+**Cause:** robots.txt blocking AI user agents
+
+**Fix:**
+```txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+```
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/resources/best-practices" arrow="right">
+    Best Practices
+  </Button>
+  <Button href="/quickstart" variant="outline">
+    Quickstart Guide
+  </Button>
+</div>
+

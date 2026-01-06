@@ -1,0 +1,232 @@
+export const metadata = {
+  title: 'AEO Frequently Asked Questions',
+  description: 'Common questions about Answer Engine Optimization, AI search visibility, and LLM optimization answered by experts.',
+  openGraph: {
+    title: 'AEO FAQ | AEO.dev',
+    description: 'Common questions about Answer Engine Optimization, AI search visibility, and LLM optimization answered by experts.',
+    url: 'https://aeo.dev/resources/faq',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AEO FAQ' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# Frequently Asked Questions
+
+Common questions about Answer Engine Optimization, AI search, and LLM visibility answered clearly and concisely. {{ className: 'lead' }}
+
+## General AEO Questions
+
+### Is AEO worth investing in given how quickly AI changes?
+
+**Yes.** A common concern is whether optimizing for AI search is pointless since responses change frequently. However, research shows:
+
+- The brands appearing in AI search results **don't change drastically** between queries
+- While exact wording varies, **top brands for specific prompts remain consistent**
+- Citation links (sources) appear **relatively stable over time**
+- Although rankings may shift slightly, **presence remains fairly constant**
+
+Conclusion: It's better to start optimizing sooner rather than later.
+
+### Isn't every AI answer unique? Does optimization even work?
+
+Every response from an LLM is inherently unique—parameters like "temperature" control creativity and can influence output. However:
+
+- The **core information** tends to remain consistent
+- **Brand recommendations** stay relatively stable
+- **Citation sources** don't change dramatically
+
+Monitoring general patterns is valuable even if exact responses vary.
+
+### What's the difference between AEO, GEO, and LLMO?
+
+| Term | Full Name | Focus |
+|------|-----------|-------|
+| **AEO** | Answer Engine Optimization | Optimizing for AI-powered search engines |
+| **GEO** | Generative Engine Optimization | Similar to AEO, focuses on generative AI search |
+| **LLMO** | Large Language Model Optimization | Optimizing for LLM training data (longer-term) |
+| **GAIO** | Generative AI Optimization | Overarching term for all AI optimization |
+
+All these terms refer to similar practices with slightly different emphases.
+
+### Is traditional SEO still relevant?
+
+**Absolutely.** Research shows a **strong correlation (~0.65)** between Google page 1 rankings and LLM brand mentions. Your SEO work directly supports your AEO efforts.
+
+Key finding: Ranking well in traditional search helps you appear in AI responses.
+
+### How long does AEO take to show results?
+
+It varies:
+
+- **AI search with web browsing** (ChatGPT, Perplexity) — Changes can appear relatively quickly as new content is indexed
+- **Pure LLMs** (Claude, older GPT models) — Longer term, as improvements require model retraining
+- **Google AI Overviews** — Tied to traditional SEO timeline
+
+Generally, expect 3-6 months for meaningful visibility improvements.
+
+## Technical Questions
+
+### Should I block AI crawlers?
+
+**Generally, no.** Blocking AI crawlers removes you from AI search results entirely.
+
+Consider blocking only if:
+- You have proprietary content you don't want in training data
+- You have legal/regulatory requirements
+- You specifically want to opt out
+
+Even then, consider blocking training bots while allowing real-time search bots.
+
+### Does Schema.org markup help with AI visibility?
+
+**Yes, indirectly.** AI systems don't parse your schema in real-time, but:
+
+- Well-structured data **improves how training data interprets your site**
+- Schema helps with **traditional SEO, which correlates with AI visibility**
+- Knowledge graphs (built from schema) **inform AI systems**
+- It **future-proofs** your content for smarter AI systems
+
+### What's llms.txt and do I need it?
+
+llms.txt is a new standard helping LLMs understand your site structure. It's similar to robots.txt but specifically for AI.
+
+**Should you implement it?** Yes—it's low effort and helps AI systems understand your content organization.
+
+### Do backlinks still matter for AI visibility?
+
+**Less than for traditional SEO.** Research shows backlinks have a **weak or neutral correlation** with LLM visibility. However:
+
+- Backlinks help traditional SEO, which correlates with AI visibility
+- Links from authoritative sources (Wikipedia, major publications) carry weight
+- The quality of link context matters more than quantity
+
+## Strategy Questions
+
+### What's the fastest way to improve AI visibility?
+
+Priority actions for quick wins:
+
+1. **Add quotes and statistics** to existing content (30-40% improvement potential)
+2. **Ensure AI crawler access** via robots.txt
+3. **Implement basic Schema.org** markup
+4. **Create/update llms.txt** file
+5. **Test and monitor** current visibility
+
+### Should I focus on all AI platforms or just one?
+
+Start broad, then optimize:
+
+1. **Begin with fundamentals** that help across all platforms
+2. **Monitor which platforms** drive your traffic/mentions
+3. **Prioritize based on your audience** — B2B might focus on Perplexity, consumer might focus on ChatGPT
+4. **Track platform-specific results** and adjust
+
+### How important is Wikipedia for AI visibility?
+
+**Very important.** Wikipedia is weighted **5x higher** in many LLM training datasets and accounts for **~10% of AI search citations**. If you're eligible for Wikipedia, pursuing a listing should be a priority.
+
+### Is Reddit really that important?
+
+**Yes.** Reddit is the **most cited domain** in AI search results (~32% of citations) due to:
+
+- Reddit data is licensed to OpenAI and others for training
+- AI values authentic user discussions
+- Reddit content is extensive and regularly updated
+
+Active Reddit presence can significantly impact AI visibility.
+
+### What about "Black Hat" AEO tactics?
+
+**Avoid them.** Examples include:
+- Prompt injection ("Ignore previous instructions...")
+- Fake reviews/content
+- Manipulation attempts
+
+These tactics may work short-term but damage long-term reputation and risk penalties as AI systems improve at detection.
+
+## Measurement Questions
+
+### How do I track AI referral traffic?
+
+In Google Analytics 4:
+
+1. Create a custom channel group
+2. Use regex to identify AI referrers (see below)
+3. Monitor trends over time
+
+**Regex pattern:**
+
+```text
+^.*openai.*|.*chatgpt.*|.*perplexity.*|.*claude.*$
+```
+
+### What metrics should I track for AEO?
+
+Key metrics:
+
+| Category | Metrics |
+|----------|---------|
+| **Traffic** | AI referral visits, growth rate, pages receiving traffic |
+| **Visibility** | Brand mention frequency, citation count, response position |
+| **Engagement** | AI referral conversion rate, time on site, bounce rate |
+| **Competitive** | Share of voice vs competitors |
+
+### How do I test my AI visibility?
+
+Manual testing protocol:
+
+1. Select 10-20 key queries related to your brand
+2. Test across ChatGPT, Perplexity, Google (AI Overviews), Bing Copilot
+3. Document: Was your brand mentioned? What position? Which competitors appeared?
+4. Repeat weekly/monthly to track changes
+
+### Are there agencies specializing in AEO?
+
+Yes, many SEO agencies are adapting to include AEO services. Look for agencies that:
+
+- Understand how AI search works
+- Have AEO-specific strategies
+- Can measure AI visibility
+- Stay current with rapid changes
+
+Note: Search for "AEO agency" or "GEO agency" — but be careful not to confuse with "geospatial agencies."
+
+## Content Questions
+
+### How should I structure content for AI?
+
+Key principles:
+
+- **Lead with answers** — Key information in first paragraph
+- **Use clear headings** — H1 → H2 → H3 hierarchy
+- **Include Q&A format** — Mirror how users ask questions
+- **Add data and citations** — Statistics improve citation rates by 30-40%
+- **Be comprehensive** — Cover topics thoroughly
+
+### How many statistics/quotes should I include?
+
+Research suggests:
+
+- **3-5 relevant statistics** per major content piece
+- **2-3 expert quotes** per piece
+- **5-6 source citations** maximum for natural flow
+
+Quality over quantity—each should add genuine value.
+
+### Should I optimize for keywords or natural language?
+
+**Natural language.** LLM prompts average ~13 words vs 2-4 for traditional search. Write how people actually ask questions, not keyword-optimized phrases.
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    Quickstart Guide
+  </Button>
+  <Button href="/" variant="outline">
+    Back to Home
+  </Button>
+</div>
+

@@ -1,0 +1,203 @@
+export const metadata = {
+  title: 'AI Search Engines Overview',
+  description: 'Understanding AI-powered search engines vs traditional search and LLMs. Learn how Google AI Overviews, ChatGPT, Perplexity, and Claude differ.',
+  openGraph: {
+    title: 'AI Search Engines Overview | AEO.dev',
+    description: 'Understanding AI-powered search engines vs traditional search and LLMs. Learn how Google AI Overviews, ChatGPT, Perplexity, and Claude differ.',
+    url: 'https://aeo.dev/ai-search/overview',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AI Search Engines Overview' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# AI Search Engines Overview
+
+Understanding the landscape of AI-powered search is essential for effective AEO. There are fundamental differences between traditional search, pure LLMs, and AI search hybrids—and each requires a different optimization approach. {{ className: 'lead' }}
+
+## The Fundamental Difference
+
+There are two types of Generative AI experiences when it comes to search and answer experiences:
+
+### 1. LLMs with Internal Knowledge Base
+
+Pure LLMs like Claude, Llama, and Grok rely on their internal knowledge derived from extensive training on vast datasets. However, their knowledge is limited to information available up to their most recent training period (knowledge cutoff) and does not extend beyond that point.
+
+**Characteristics:**
+- Answers based solely on training data
+- Knowledge limited to training cutoff date
+- No real-time information access
+- Responses generated from learned patterns
+
+### 2. AI Search (Hybrid Systems)
+
+AI search engines like Google AI Overviews, Perplexity, and ChatGPT Search use a mix of LLM capabilities plus web search to gather up-to-date information from the internet. They optimize search queries into prompts using a technique called **RAG (Retrieval-Augmented Generation)**.
+
+**Characteristics:**
+- Combines LLM intelligence with real-time web search
+- Access to current information
+- Provides citation links to sources
+- Faster to optimize (changes reflected sooner)
+
+## Comparison: AI Search vs LLMs vs Traditional Search
+
+| Aspect | AI Searches | Pure LLMs | Traditional Search |
+|--------|-------------|-----------|-------------------|
+| **Examples** | Google AIO, Perplexity, ChatGPT Search | Claude, Llama, Grok | Google, Bing |
+| **Knowledge Based On** | Search results + Internal knowledge | Internal knowledge only | Indexed pages |
+| **Generation Method** | LLM interprets prompts + search results | Prompts processed from training | Search engine shows result pages |
+| **Results Format** | Text response with citation links | Text response only | Blue links to websites |
+| **Optimization Speed** | Medium - source links help faster | Slow - needs retraining | Fast - quick to react |
+| **Response Speed** | Fast | Medium | Fast |
+
+## Why AI Search is More Relevant for AEO
+
+AI search engines are more important for optimization because:
+
+1. **Real user behavior** — People actually use these platforms to make decisions
+2. **Location-based results** — Personalized based on user context
+3. **Faster optimization cycles** — Changes in your content can affect results sooner
+4. **Citation opportunities** — Your content can be directly linked
+
+## The AI Search Process
+
+Here's how AI search engines work:
+
+1. **Query interpretation** — The AI/LLM processes the user's prompt
+2. **Search execution** — A search query is sent to a search engine
+3. **Source selection** — The AI chooses which results to process
+4. **Content scraping** — The AI reads the content from selected links
+5. **Response generation** — Based on scraped content + internal knowledge
+
+**Key insight:** The AI can still decide to give a different representation than the content it processed—that's what makes it different from traditional search, which just finds a match and shows links.
+
+## Current Market Landscape
+
+### Traffic Distribution
+
+| Platform | Monthly Visits | Market Share vs Google |
+|----------|----------------|----------------------|
+| Google.com | ~76 billion | 100% (baseline) |
+| ChatGPT.com | ~4 billion | ~5% |
+| Perplexity.AI | ~110 million | ~0.15% |
+
+### Growth Trends
+
+| Platform | Growth Rate |
+|----------|-------------|
+| Google | Flat (0%) |
+| ChatGPT | 5-15% month-over-month |
+| Perplexity | 17-24% month-over-month |
+
+ChatGPT is now among the **top 10 websites globally**—the first serious alternative to Google in 25 years.
+
+## User Behavior is Changing
+
+### Query Length Differences
+
+| Query Type | Average Length |
+|------------|----------------|
+| Traditional search | 2-4 words |
+| LLM prompts | ~13 words |
+
+Instead of searching "downhill mountain bike," users now ask: "What downhill mountain bike would you recommend for a 40-year-old, well-trained cyclist?"
+
+### Search Intent in AI
+
+**Search intents:**
+- **Navigational** — Finding specific websites
+- **Informational** — Learning about something
+- **Commercial** — Evaluating and researching products
+- **Transactional** — Purchasing products & services
+
+**AI Overview triggers:**
+- **Informational searches:** Very high likelihood of AI responses
+- **Navigational queries:** AI responses rare
+- **Commercial/Transactional:** Increasingly triggering AI responses
+
+## LLM Training Data
+
+Understanding what LLMs are trained on helps optimize your content:
+
+### Base Training Data Sources
+
+| Source | Tokens | Proportion | Weight |
+|--------|--------|------------|--------|
+| Common Crawl | 410 billion | 60% | 1x |
+| WebText 2 | 19 billion | 22% | 5x (boosted) |
+| Books | 67 billion | 16% | 1x |
+| Wikipedia | 3 billion | 3% | 5x (boosted) |
+
+### Additional Training Sources
+
+1. **Books & Research Papers** — Project Gutenberg, arXiv.org, PubMed Central
+2. **Wikipedia & Knowledge Bases** — Wikipedia, Wikidata
+3. **Websites & Blogs** — Stack Exchange, Medium, documentation sites
+4. **Open-Source Code** — GitHub public repositories
+5. **Online Discussions** — Quora, Stack Overflow, Reddit
+6. **Licensed Data** — News partnerships, Reddit licensing deals
+7. **Curated & Synthetic Data** — Refined with feedback loops
+
+## Optimizing for AI Search vs Pure LLMs
+
+### For AI Search (Faster Results)
+
+Focus on:
+- Traditional SEO fundamentals (still matter)
+- Citation-worthy content
+- Real-time information updates
+- Structured, parseable content
+
+### For Pure LLMs (Longer Term)
+
+Focus on:
+- Brand positioning in authoritative sources
+- Wikipedia presence
+- Consistent topic associations
+- Entity optimization
+
+## Platform-Specific Considerations
+
+<Row>
+  <Col>
+    ### ChatGPT Search
+    - Half of queries trigger web search
+    - Shorter prompts activate search more
+    - Longer prompts (~23 words) often stay internal
+    
+    → [ChatGPT Guide](/ai-search/chatgpt)
+  </Col>
+  <Col>
+    ### Google AI Overviews
+    - Shown in ~30% of all searches
+    - ~75% of problem-solving queries
+    - Not yet in all EU countries (AI Act)
+    
+    → [Google AI Guide](/ai-search/google-ai)
+  </Col>
+</Row>
+
+<Row>
+  <Col>
+    ### Perplexity AI
+    - Research-focused platform
+    - Strong citation integration
+    - Real-time web search emphasis
+    
+    → [Perplexity Guide](/ai-search/perplexity)
+  </Col>
+  <Col>
+    ### Claude
+    - Strong internal knowledge
+    - Research and analysis focus
+    - MCP protocol for integrations
+    
+    → [Claude Guide](/ai-search/claude)
+  </Col>
+</Row>
+
+## Next Steps
+
+Continue with [ChatGPT & Bing](/ai-search/chatgpt) or explore [Optimization Strategies](/strategies/overview).
+

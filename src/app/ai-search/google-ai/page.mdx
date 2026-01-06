@@ -1,0 +1,262 @@
+export const metadata = {
+  title: 'Google AI Overviews Optimization',
+  description: 'Complete guide to optimizing for Google AI Overviews (formerly SGE). Learn when AI Overviews appear and how to get featured.',
+  openGraph: {
+    title: 'Google AI Overviews Optimization | AEO.dev',
+    description: 'Complete guide to optimizing for Google AI Overviews (formerly SGE). Learn when AI Overviews appear and how to get featured.',
+    url: 'https://aeo.dev/ai-search/google-ai',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'Google AI Overviews' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# Google AI Overviews Optimization
+
+Google has been the dominant search engine for 25 years—and still is today. With the integration of Gemini AI into search results through AI Overviews, understanding this new feature is essential for maintaining visibility. {{ className: 'lead' }}
+
+## What Are Google AI Overviews?
+
+Google AI Overviews (AIO), previously known as Search Generative Experience (SGE), are AI-generated summaries that appear at the top of search results. Powered by Google's Gemini LLM, they provide direct answers to queries before traditional blue links.
+
+**Key characteristics:**
+- Appear above traditional search results
+- Provide synthesized answers from multiple sources
+- Include citation links to source content
+- Similar in concept to Featured Snippets, but more comprehensive
+
+## AI Overview Statistics
+
+| Metric | Value |
+|--------|-------|
+| Queries triggering AIOs | ~30% of all searches |
+| Problem-solving queries | ~75% show AIOs |
+| Global reach | 1+ billion monthly users |
+| Current availability | Most countries except EU |
+
+**Note:** Some EU countries are starting to see AIOs appear, but full rollout is limited by the EU AI Act.
+
+## Impact on Traffic and CTR
+
+Research shows significant impacts when AI Overviews appear:
+
+| Metric | Impact |
+|--------|--------|
+| Organic CTR | Significant decrease |
+| Paid CTR | -12% drop |
+| Zero-click searches | Increasing |
+
+When an AI Overview answers the user's question directly, they often don't click through to any source—even the ones cited.
+
+## When Do AI Overviews Appear?
+
+### By Search Intent
+
+| Intent Type | AIO Likelihood | Example |
+|-------------|----------------|---------|
+| **Informational** | Very High | "How does photosynthesis work?" |
+| **Problem-solving** | Very High (~75%) | "How to fix a leaking faucet" |
+| **Commercial** | Increasing | "Best laptop for programming" |
+| **Transactional** | Moderate | "Buy iPhone 15 Pro" |
+| **Navigational** | Very Low | "Facebook login" |
+
+### Query Characteristics That Trigger AIOs
+
+- Questions starting with "how," "what," "why"
+- Comparative queries ("X vs Y")
+- List-based queries ("best," "top")
+- Technical or educational topics
+- Health and wellness questions
+- Product research queries
+
+## How Google AI Overviews Work
+
+### The Process
+
+1. **Query interpretation** — Gemini analyzes the search query
+2. **Source identification** — Identifies relevant, authoritative sources
+3. **Content synthesis** — Combines information from multiple sources
+4. **Response generation** — Creates a comprehensive answer
+5. **Citation attribution** — Links to source pages
+
+### What Makes a Source Get Featured
+
+Research indicates these factors influence AIO citations:
+
+- **High-quality, comprehensive content** — Thorough topic coverage
+- **E-E-A-T signals** — Experience, Expertise, Authoritativeness, Trust
+- **Traditional SEO factors** — Ranking on page 1 correlates with AIO visibility
+- **Structured content** — Clear formatting and organization
+- **Fresh content** — Up-to-date information
+
+## Optimization Strategies for AIOs
+
+### 1. Focus on E-E-A-T
+
+Google's E-E-A-T framework is crucial for AI Overviews:
+
+**Experience**
+- First-hand knowledge demonstration
+- Personal insights and case studies
+- Real-world application examples
+
+**Expertise**
+- Author credentials clearly displayed
+- Depth of knowledge evident
+- Technical accuracy
+
+**Authoritativeness**
+- Industry recognition
+- Quality backlinks
+- Brand mentions in authoritative sources
+
+**Trust**
+- Accurate, well-sourced information
+- Transparent about sources
+- Consistent, reliable content
+
+### 2. Optimize Content Structure
+
+AI Overviews favor well-structured content:
+
+```markdown
+## Direct Answer to the Query
+
+[Clear, concise answer in first paragraph]
+
+### Supporting Details
+
+[Expanded explanation with specifics]
+
+### Key Points
+
+- Point 1 with evidence
+- Point 2 with data
+- Point 3 with context
+
+### Related Considerations
+
+[Additional helpful information]
+```
+
+### 3. Implement Proper Schema
+
+Schema.org markup helps Google understand your content:
+
+**Essential schemas for AIO visibility:**
+- `Article` or `BlogPosting` for content
+- `FAQPage` for Q&A content
+- `HowTo` for instructional content
+- `Organization` for brand information
+- `Person` for author attribution
+
+### 4. Answer Questions Directly
+
+Structure content to provide clear answers:
+
+```markdown
+## What is [Topic]?
+
+[Direct answer] is [clear definition]. It works by [brief explanation].
+
+Key characteristics include:
+- Feature 1
+- Feature 2
+- Feature 3
+```
+
+### 5. Include Supporting Data
+
+AI Overviews frequently pull statistics and data:
+
+```markdown
+According to research:
+
+- **75%** of problem-solving queries trigger AI Overviews
+- **30%** of all searches show AI-generated responses
+- **12%** decline in paid CTR when AIOs appear
+
+This data suggests...
+```
+
+## Traditional SEO Still Matters
+
+A key finding: **Google rankings strongly correlate with AI Overview visibility.**
+
+| SEO Factor | Correlation with AIO Visibility |
+|------------|--------------------------------|
+| Page 1 ranking | ~0.65 (strong) |
+| Bing rankings | ~0.5-0.6 (moderate) |
+| Backlinks | Weak/neutral |
+| Content variety | Minimal impact |
+
+**Takeaway:** Continue investing in traditional SEO—it directly supports AIO visibility.
+
+## Technical Requirements
+
+### Ensure Crawlability
+
+```txt
+# Allow Googlebot (required for AIOs)
+User-agent: Googlebot
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+```
+
+### Mobile Optimization
+
+AI Overviews are prominent on mobile. Ensure:
+- Mobile-responsive design
+- Fast page load times
+- Easy-to-read formatting
+- Touch-friendly navigation
+
+### Page Speed
+
+Google values fast-loading pages:
+- Core Web Vitals optimization
+- Image compression
+- Minimal JavaScript blocking
+- CDN implementation
+
+## Monitoring AIO Performance
+
+### Manual Testing
+
+Regularly test your target queries:
+1. Search in incognito mode
+2. Check if AI Overview appears
+3. Note which sources are cited
+4. Track changes over time
+
+### Automated Monitoring
+
+Use SEO tools that track:
+- AIO appearance for target keywords
+- Your citation frequency in AIOs
+- Competitor citations
+- Changes over time
+
+## Geographic Considerations
+
+### EU Availability
+
+Due to the EU AI Act, AI Overviews have limited availability in Europe:
+- Not shown in most EU countries
+- Some countries starting to see rollout
+- Full availability timeline uncertain
+
+### International Targeting
+
+For non-EU markets:
+- Use hreflang for language targeting
+- Consider market-specific content
+- Monitor regional AIO behavior
+
+## Next Steps
+
+Continue with [Perplexity AI](/ai-search/perplexity) or explore the [Schema.org Guide](/optimization/schema).
+

@@ -1,0 +1,259 @@
+export const metadata = {
+  title: 'Best Practices',
+  description: 'Proven AEO strategies and best practices from sites successfully ranking in AI search results.',
+  openGraph: {
+    title: 'Best Practices | AEO.dev',
+    description: 'Proven AEO strategies and best practices from sites successfully ranking in AI search results.',
+    url: 'https://aeo.dev/resources/best-practices',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AEO Best Practices' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# AEO Best Practices
+
+Proven strategies for Answer Engine Optimization based on research and real-world success stories. These best practices will help your content get discovered and cited by AI systems. {{ className: 'lead' }}
+
+## Content Strategy
+
+### 1. Write for Questions
+
+AI search often starts with questions. Structure content to answer them:
+
+```markdown
+✅ Good: "What is Answer Engine Optimization?"
+AEO is the practice of optimizing content for AI search engines...
+
+❌ Bad: "Introduction to AEO"
+In this article, we'll explore the topic of AEO...
+```
+
+### 2. Lead with the Answer
+
+Put key information first—AI often extracts from early paragraphs:
+
+```markdown
+✅ Good:
+Answer Engine Optimization (AEO) is the practice of optimizing 
+content for AI-powered search engines. It differs from SEO by 
+focusing on machine comprehension rather than rankings.
+
+❌ Bad:
+In today's digital landscape, search is evolving rapidly. 
+Traditional approaches may not be sufficient. Let's explore
+what this means for your content strategy...
+```
+
+### 3. Be Specific and Factual
+
+AI systems prefer concrete, verifiable information:
+
+```markdown
+✅ Good:
+According to industry research, 45% of knowledge workers now 
+use AI search tools weekly (Source, 2025). Implementation takes
+approximately 2-4 weeks for most websites.
+
+❌ Bad:
+Many people are using AI search these days. It doesn't take too
+long to implement AEO on your site.
+```
+
+### 4. Cover Topics Comprehensively
+
+Become the authoritative source on your topics:
+
+- Cover all aspects of a topic
+- Link related content together
+- Update regularly with new information
+- Address common questions and edge cases
+
+## Technical Implementation
+
+### 1. Implement Structured Data Early
+
+Don't wait—add Schema.org markup now:
+
+**Priority Order:**
+1. WebSite and Organization schemas (homepage)
+2. Article/BlogPosting schemas (content pages)
+3. FAQPage schemas (FAQ content)
+4. HowTo schemas (tutorials)
+5. Product/Service schemas (commercial pages)
+
+### 2. Create Comprehensive llms.txt
+
+Include all relevant fields:
+
+```txt
+# Essential
+site_name: Your Site
+site_url: https://yoursite.com
+site_description: Clear, comprehensive description
+
+# Permissions (be explicit)
+llm_inference: allow
+llm_training: allow
+
+# Entry points (guide AI to important content)
+primary_entry: https://yoursite.com
+documentation: https://yoursite.com/docs
+```
+
+### 3. Configure AI Crawler Access
+
+Be intentional about AI access:
+
+```txt
+# robots.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /private/
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+```
+
+### 4. Optimize Page Performance
+
+AI crawlers have limited resources:
+
+- Page load under 3 seconds
+- Minimal JavaScript for content rendering
+- Clean HTML structure
+- Mobile-friendly design
+
+## Content Structure
+
+### 1. Use Semantic HTML
+
+```html
+✅ Good:
+<article>
+  <header>
+    <h1>Main Topic</h1>
+    <p class="lead">Summary paragraph</p>
+  </header>
+  <section id="concept-1">
+    <h2>First Major Point</h2>
+    <p>Details...</p>
+  </section>
+</article>
+
+❌ Bad:
+<div class="article">
+  <div class="title">Main Topic</div>
+  <div class="content">
+    <div class="section">
+      <div class="heading">First Major Point</div>
+```
+
+### 2. Maintain Heading Hierarchy
+
+```markdown
+✅ Good:
+# Main Topic (H1)
+## Section One (H2)
+### Subsection (H3)
+## Section Two (H2)
+
+❌ Bad:
+# Main Topic (H1)
+### Subsection (H3) ← Skipped H2
+## Section (H2)
+#### Details (H4) ← Skipped H3
+```
+
+### 3. Use Lists for Scannable Content
+
+```markdown
+Key benefits of AEO:
+
+- **Increased visibility** in AI search results
+- **Higher citation rates** from language models  
+- **Better brand recognition** through AI mentions
+- **Future-proofed content** strategy
+```
+
+## Authority Building
+
+### 1. Display Author Expertise
+
+```html
+<div class="author">
+  <img src="/authors/jane-smith.jpg" alt="Dr. Jane Smith">
+  <h3>Dr. Jane Smith</h3>
+  <p>AI Research Lead with 10+ years experience in search systems.
+     Previously at Google and Stanford AI Lab.</p>
+  <a href="/authors/jane-smith">View all articles</a>
+</div>
+```
+
+### 2. Cite Sources
+
+Reference authoritative sources in your content:
+
+```markdown
+According to research published in Nature (Smith et al., 2025),
+AI search usage has increased 300% year-over-year. This finding
+is consistent with industry reports from [McKinsey](link) and
+[Gartner](link).
+```
+
+### 3. Keep Content Current
+
+- Add "Last updated" dates
+- Regularly review and update facts
+- Remove or update outdated content
+- Track industry changes
+
+## Common Mistakes to Avoid
+
+### ❌ Keyword Stuffing
+AI understands meaning, not just keywords. Write naturally.
+
+### ❌ Thin Content
+Short, superficial content won't be cited. Go deep.
+
+### ❌ Duplicate Content
+Unique, original content gets cited. Don't copy.
+
+### ❌ Ignoring Structure
+Unstructured content is hard for AI to parse. Use headings and semantic HTML.
+
+### ❌ Blocking AI Crawlers
+If AI can't access your content, you won't be cited.
+
+### ❌ Missing Metadata
+Complete metadata helps AI understand and cite your content.
+
+## Measurement
+
+Track your AEO success:
+
+| Metric | How to Measure |
+|--------|----------------|
+| AI Citations | Manual search in AI tools |
+| AI Traffic | Referrals from AI platforms |
+| Brand Mentions | AI-generated content mentioning you |
+| Content Reach | Impressions via cited sources |
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/resources/case-studies" arrow="right">
+    Case Studies
+  </Button>
+  <Button href="/quickstart" variant="outline">
+    Quickstart Guide
+  </Button>
+</div>
+

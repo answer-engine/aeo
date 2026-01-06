@@ -1,0 +1,100 @@
+export const metadata = {
+  title: 'Performance',
+  description: 'Optimize page performance to ensure AI crawlers can efficiently access and index your content.',
+  openGraph: {
+    title: 'Performance | AEO.dev',
+    description: 'Optimize page performance to ensure AI crawlers can efficiently access and index your content.',
+    url: 'https://aeo.dev/technical/performance',
+    siteName: 'AEO.dev',
+  },
+}
+
+# Performance for AI Crawlers
+
+AI crawlers have limited resources and time budgets. Fast, efficient pages are more likely to be fully indexed and cited. {{ className: 'lead' }}
+
+## Why Performance Matters
+
+AI crawlers face constraints:
+
+- **Time limits** — May abandon slow pages
+- **Resource budgets** — Limited JavaScript execution
+- **Crawl quotas** — Faster sites get crawled more
+- **Content prioritization** — Quick access to main content
+
+## Key Metrics
+
+| Metric | Target | Why It Matters |
+|--------|--------|----------------|
+| Time to First Byte | < 200ms | Server responsiveness |
+| First Contentful Paint | < 1.5s | Content accessibility |
+| Largest Contentful Paint | < 2.5s | Main content visibility |
+| Total Blocking Time | < 200ms | JavaScript execution |
+
+## Optimization Strategies
+
+### 1. Server-Side Rendering
+
+Ensure content is in initial HTML:
+
+```javascript
+// Next.js - SSR or SSG
+export async function getStaticProps() {
+  return {
+    props: { content: await getContent() }
+  }
+}
+```
+
+### 2. Minimize JavaScript
+
+AI crawlers may not execute all JavaScript:
+
+- Use SSR/SSG for content
+- Avoid JS-only navigation
+- Include meta tags in `<head>`
+
+### 3. Optimize Images
+
+```html
+<img 
+  src="image.webp" 
+  alt="Descriptive alt text"
+  width="800" 
+  height="600"
+  loading="lazy"
+>
+```
+
+### 4. Enable Caching
+
+```txt
+# .htaccess or server config
+Cache-Control: public, max-age=31536000
+```
+
+## Testing Tools
+
+- **Google PageSpeed Insights** — Performance metrics
+- **WebPageTest** — Detailed loading analysis
+- **Lighthouse** — Comprehensive audits
+
+## Best Practices
+
+1. **SSR/SSG** — Don't rely on client-side rendering
+2. **Fast TTFB** — Optimize server response time
+3. **Minimal JS** — Critical content without JavaScript
+4. **Efficient assets** — Optimized images, minimal CSS
+5. **CDN** — Fast global access
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/resources/best-practices" arrow="right">
+    Best Practices
+  </Button>
+  <Button href="/quickstart" variant="outline">
+    Quickstart Guide
+  </Button>
+</div>
+

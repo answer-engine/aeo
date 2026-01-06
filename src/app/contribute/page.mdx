@@ -1,0 +1,330 @@
+export const metadata = {
+  title: 'Contribute to AEO.dev',
+  description: 'Learn how to contribute to the AEO.dev knowledge base. Use our visual CMS editor or edit directly on GitHub.',
+  openGraph: {
+    title: 'Contribute to AEO.dev',
+    description: 'Learn how to contribute to the AEO.dev knowledge base.',
+    url: 'https://aeo.dev/contribute',
+    siteName: 'AEO.dev',
+  },
+}
+
+# Contribute to AEO.dev
+
+The field of Answer Engine Optimization is evolving faster than any single team can track. This knowledge base is designed to be a **living, community-managed resource** where everyone can contribute their insights, research, and practical techniques. {{ className: 'lead' }}
+
+---
+
+## Start Contributing Now
+
+<div className="not-prose my-8 p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20">
+  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div>
+      <h3 className="text-lg font-semibold text-emerald-900 dark:text-emerald-100 m-0">Visual Content Editor</h3>
+      <p className="text-sm text-emerald-700 dark:text-emerald-300 mt-1 mb-0">Create and edit content without writing code. Sign in with GitHub to get started.</p>
+    </div>
+    <a 
+      href="/admin/index.html" 
+      className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors whitespace-nowrap"
+    >
+      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+      </svg>
+      Open Content Editor
+    </a>
+  </div>
+</div>
+
+---
+
+## Why Contribute?
+
+<Row>
+  <Col>
+    ### Rapid Change
+    AI search is changing faster than anything we've seen before. Collective intelligence is essential to keep up with the pace of innovation.
+  </Col>
+  <Col>
+    ### Diverse Perspectives
+    Different industries, content types, and AI platforms require varied optimization approaches. Your unique experience matters.
+  </Col>
+</Row>
+
+<Row>
+  <Col>
+    ### Shared Learning
+    As we all discover what works (and what doesn't), sharing this knowledge benefits the entire community and advances the field.
+  </Col>
+  <Col>
+    ### Build Authority
+    Contributors are credited and build their reputation as AEO experts. Major contributors may be invited as maintainers.
+  </Col>
+</Row>
+
+---
+
+## Method 1: Visual Content Editor (Decap CMS)
+
+The easiest way to contribute — no coding required. Our built-in content management system provides a visual editor for creating and editing content.
+
+### How It Works
+
+1. **Open the Editor** — Click the "Open Content Editor" button above or go to [aeo.dev/admin](/admin/index.html)
+2. **Sign in with GitHub** — You'll be prompted to authenticate with your GitHub account
+3. **Create or Edit Content** — Use the visual editor to write your content with rich text formatting
+4. **Submit for Review** — When you save, your changes automatically create a Pull Request
+
+### What You Can Do in the CMS
+
+| Action | Description |
+|--------|-------------|
+| **Create New Content** | Add new articles, guides, case studies, or glossary terms |
+| **Edit Existing Pages** | Fix typos, update outdated information, or expand content |
+| **Upload Images** | Add screenshots, diagrams, or other visual content |
+| **Preview Changes** | See how your content will look before submitting |
+
+### Editorial Workflow
+
+All contributions go through our editorial workflow:
+
+```
+Draft → In Review → Ready → Published
+```
+
+1. **Draft** — Your initial submission
+2. **In Review** — Maintainers review your contribution
+3. **Ready** — Approved and queued for publishing
+4. **Published** — Live on the site
+
+<Note>
+  The CMS uses GitHub's Pull Request system under the hood. You'll need a GitHub account to contribute, but you don't need to know Git or write any code.
+</Note>
+
+---
+
+## Method 2: Edit on GitHub
+
+Every page on AEO.dev can be edited directly on GitHub. This is great for quick fixes, typo corrections, or small updates.
+
+### How to Edit a Page
+
+1. **Find the Source File**
+   - Pages are located in `src/app/[path]/page.mdx`
+   - For example, this page is at `src/app/contribute/page.mdx`
+
+2. **Open on GitHub**
+   - Go to [github.com/answer-engine/aeo](https://github.com/answer-engine/aeo)
+   - Navigate to the file you want to edit
+   - Click the pencil icon to edit
+
+3. **Make Your Changes**
+   - Edit the Markdown/MDX content
+   - Use the Preview tab to check your changes
+
+4. **Submit a Pull Request**
+   - Scroll down and add a commit message
+   - Select "Create a new branch" 
+   - Click "Propose changes"
+
+### File Structure
+
+```
+src/app/
+├── page.mdx                    # Homepage
+├── what-is-aeo/
+│   └── page.mdx               # /what-is-aeo
+├── ai-search/
+│   ├── overview/
+│   │   └── page.mdx           # /ai-search/overview
+│   ├── chatgpt/
+│   │   └── page.mdx           # /ai-search/chatgpt
+│   └── ...
+├── strategies/
+│   ├── overview/
+│   │   └── page.mdx           # /strategies/overview
+│   └── ...
+├── resources/
+│   ├── glossary/
+│   │   └── page.mdx           # /resources/glossary
+│   └── ...
+└── contribute/
+    └── page.mdx               # This page
+```
+
+### MDX Format
+
+Pages use MDX (Markdown + JSX). Here's a quick reference:
+
+```mdx
+export const metadata = {
+  title: 'Your Page Title',
+  description: 'A brief description for SEO.',
+}
+
+# Main Heading
+
+Introduction paragraph with **bold** and *italic* text. {{ className: 'lead' }}
+
+## Section Heading
+
+Regular paragraph content.
+
+### Subsection
+
+- Bullet point one
+- Bullet point two
+
+<Note>
+  Special callout for important information.
+</Note>
+
+<Row>
+  <Col>
+    ### Column One
+    Content for first column.
+  </Col>
+  <Col>
+    ### Column Two
+    Content for second column.
+  </Col>
+</Row>
+```
+
+---
+
+## Method 3: Fork and Pull Request
+
+For larger contributions like new sections, major rewrites, or multiple related changes, fork the repository and work locally.
+
+### Setup
+
+```bash
+# 1. Fork the repo on GitHub first, then clone your fork
+git clone https://github.com/YOUR_USERNAME/aeo.git
+cd aeo
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+
+# 4. Open http://localhost:3000 in your browser
+```
+
+### Creating Content
+
+```bash
+# 1. Create a feature branch
+git checkout -b feature/my-contribution
+
+# 2. Create your content file
+mkdir -p src/app/your-section
+touch src/app/your-section/page.mdx
+
+# 3. Write your content (see MDX format above)
+
+# 4. Test locally at http://localhost:3000/your-section
+```
+
+### Submitting
+
+```bash
+# 1. Commit your changes
+git add .
+git commit -m "Add: description of your contribution"
+
+# 2. Push to your fork
+git push origin feature/my-contribution
+
+# 3. Open a Pull Request on GitHub
+# Go to github.com/answer-engine/aeo and click "New Pull Request"
+```
+
+---
+
+## Contribution Guidelines
+
+### Content Standards
+
+| Standard | Description |
+|----------|-------------|
+| **Cite Sources** | Link to research, case studies, and data to support claims |
+| **Be Specific** | Share concrete techniques with measurable results |
+| **Stay Current** | Note when strategies were tested and on which platforms |
+| **Be Practical** | Focus on actionable advice over theory |
+| **Use Examples** | Include code snippets, screenshots, or real-world examples |
+
+### What We're Looking For
+
+- **Case Studies** — Real examples of AEO strategies with measurable results
+- **Platform Updates** — Changes to how AI search engines work (ChatGPT, Perplexity, Google AI, etc.)
+- **New Techniques** — Strategies that have worked for you
+- **Tool Reviews** — Honest assessments of AEO tools and services
+- **Corrections** — Found an error? Please fix it!
+- **Translations** — Help make AEO knowledge accessible globally
+
+### Content Types
+
+| Type | Location | Description |
+|------|----------|-------------|
+| AI Search Guide | `/ai-search/` | Coverage of a specific AI platform |
+| Strategy | `/strategies/` | Detailed optimization technique |
+| Technical Guide | `/technical/` | Implementation instructions |
+| Case Study | `/resources/case-studies/` | Real-world example with data |
+| Glossary Term | `/resources/glossary/` | Definition and context |
+| Tool Documentation | `/tools/` | Documentation for AEO tools |
+
+---
+
+## Community Channels
+
+<Row>
+  <Col>
+    ### LinkedIn Group
+    Join our [LinkedIn Group](https://www.linkedin.com/groups/17145001/) for professional discussions and networking with AEO practitioners.
+  </Col>
+  <Col>
+    ### Slack Community
+    Join [answer-engine.slack.com](https://answer-engine.slack.com) for real-time discussions, questions, and community support.
+  </Col>
+</Row>
+
+<Row>
+  <Col>
+    ### GitHub Discussions
+    For longer-form discussions, RFCs, and feature requests, use [GitHub Discussions](https://github.com/answer-engine/aeo/discussions).
+  </Col>
+  <Col>
+    ### GitHub Issues
+    Report bugs, request features, or suggest improvements via [GitHub Issues](https://github.com/answer-engine/aeo/issues).
+  </Col>
+</Row>
+
+---
+
+## Recognition
+
+All contributors are recognized in our [Contributors list](https://github.com/answer-engine/aeo/graphs/contributors) on GitHub.
+
+**Major contributors** who make significant, ongoing contributions may be invited to become **maintainers** with direct commit access to the repository.
+
+---
+
+## Questions?
+
+<Note>
+  Need help contributing? Join our [Slack community](https://answer-engine.slack.com) or open a [GitHub issue](https://github.com/answer-engine/aeo/issues). We're happy to help you get started!
+</Note>
+
+<div className="not-prose mt-8">
+  <a 
+    href="/admin/index.html" 
+    className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors"
+  >
+    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+      <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+    </svg>
+    Open Content Editor
+  </a>
+</div>

@@ -1,0 +1,105 @@
+export const metadata = {
+  title: 'AI-Friendly Metadata',
+  description: 'Implement comprehensive metadata that helps AI systems understand and properly cite your content.',
+  openGraph: {
+    title: 'AI-Friendly Metadata | AEO.dev',
+    description: 'Implement comprehensive metadata that helps AI systems understand and properly cite your content.',
+    url: 'https://aeo.dev/optimization/metadata',
+    siteName: 'AEO.dev',
+  },
+}
+
+# AI-Friendly Metadata
+
+Comprehensive metadata helps AI systems understand, categorize, and properly cite your content. This guide covers essential metadata for AEO. {{ className: 'lead' }}
+
+## Essential Meta Tags
+
+```html
+<head>
+  <!-- Primary metadata -->
+  <title>Page Title | Site Name</title>
+  <meta name="description" content="Clear, informative description (150-160 characters)">
+  
+  <!-- Author and date -->
+  <meta name="author" content="Author Name">
+  <meta name="date" content="2026-01-05">
+  
+  <!-- Content classification -->
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yoursite.com/page">
+</head>
+```
+
+## Open Graph Tags
+
+Help AI systems understand page context:
+
+```html
+<meta property="og:title" content="Page Title">
+<meta property="og:description" content="Page description">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://yoursite.com/page">
+<meta property="og:site_name" content="Site Name">
+<meta property="og:image" content="https://yoursite.com/image.jpg">
+
+<!-- Article-specific -->
+<meta property="article:author" content="Author Name">
+<meta property="article:published_time" content="2026-01-05T00:00:00Z">
+<meta property="article:modified_time" content="2026-01-05T00:00:00Z">
+<meta property="article:section" content="Technology">
+```
+
+## Twitter Card Tags
+
+```html
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Page Title">
+<meta name="twitter:description" content="Page description">
+<meta name="twitter:image" content="https://yoursite.com/image.jpg">
+```
+
+## Complete Example
+
+```html
+<head>
+  <title>Complete Guide to AEO | AEO.dev</title>
+  <meta name="description" content="Learn Answer Engine Optimization (AEO) - the practice of optimizing content for AI search engines like ChatGPT and Perplexity.">
+  <meta name="author" content="AEO.dev Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aeo.dev/guide">
+  
+  <meta property="og:title" content="Complete Guide to AEO">
+  <meta property="og:description" content="Learn Answer Engine Optimization...">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aeo.dev/guide">
+  <meta property="og:site_name" content="AEO.dev">
+  <meta property="article:published_time" content="2026-01-05T00:00:00Z">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Complete Guide to AEO">
+</head>
+```
+
+## Best Practices
+
+1. **Unique titles** — Each page should have a distinct title
+2. **Descriptive descriptions** — Summarize content accurately
+3. **Include dates** — Publication and modification dates
+4. **Author attribution** — Name and credentials where relevant
+5. **Canonical URLs** — Prevent duplicate content issues
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/technical/structured-data" arrow="right">
+    Advanced Structured Data
+  </Button>
+  <Button href="/optimization/llms-txt" variant="outline">
+    llms.txt Guide
+  </Button>
+</div>
+

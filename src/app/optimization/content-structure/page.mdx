@@ -1,0 +1,234 @@
+export const metadata = {
+  title: 'Content Structure',
+  description: 'Learn how to structure your content for maximum AI comprehension with semantic markup, clear organization, and machine-readable formats.',
+  openGraph: {
+    title: 'Content Structure | AEO.dev',
+    description: 'Learn how to structure your content for maximum AI comprehension with semantic markup, clear organization, and machine-readable formats.',
+    url: 'https://aeo.dev/optimization/content-structure',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'Content Structure' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# Content Structure for AEO
+
+How you structure your content dramatically impacts how well AI systems can understand and cite it. This guide covers best practices for organizing content that AI can parse effectively. {{ className: 'lead' }}
+
+## Why Structure Matters for AI
+
+AI systems don't just read content—they parse it. Well-structured content helps AI:
+
+- **Identify main topics** and subtopics quickly
+- **Extract key facts** for citation
+- **Understand relationships** between concepts
+- **Determine content hierarchy** and importance
+
+## The Ideal Content Structure
+
+### Basic Template
+
+```html
+<article>
+  <header>
+    <h1>Main Topic Title</h1>
+    <p class="lead">Summary paragraph that answers the main question...</p>
+    <meta name="author" content="Expert Name">
+    <time datetime="2026-01-05">January 5, 2026</time>
+  </header>
+  
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>Context and background...</p>
+  </section>
+  
+  <section id="main-concept">
+    <h2>Main Concept</h2>
+    <p>Detailed explanation...</p>
+    
+    <h3>Sub-topic A</h3>
+    <p>Details...</p>
+    
+    <h3>Sub-topic B</h3>
+    <p>Details...</p>
+  </section>
+  
+  <section id="practical-application">
+    <h2>Practical Application</h2>
+    <p>How to apply this...</p>
+  </section>
+  
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>Summary and key takeaways...</p>
+  </section>
+</article>
+```
+
+## Heading Hierarchy
+
+### Rules for Headings
+
+1. **One H1 per page** — This is your main topic
+2. **H2 for major sections** — Primary divisions of content
+3. **H3 for subsections** — Details within sections
+4. **Don't skip levels** — No H1 → H3 jumps
+5. **Descriptive headings** — Should make sense out of context
+
+### Good vs Bad Examples
+
+```markdown
+❌ BAD: Vague or Skip Levels
+
+# Website
+### Part 1     ← Skipped H2
+## Overview    ← Back to H2, inconsistent
+
+✅ GOOD: Clear and Hierarchical
+
+# Complete Guide to AEO
+## What is AEO?
+### Definition
+### History
+## Why AEO Matters
+### Current Trends
+### Future Outlook
+```
+
+## The Lead Paragraph
+
+The first paragraph is crucial—AI often uses it for summaries:
+
+```markdown
+# What is Answer Engine Optimization?
+
+**Answer Engine Optimization (AEO)** is the practice of optimizing 
+content for AI-powered search engines. Unlike traditional SEO which 
+focuses on ranking in link lists, AEO ensures your content is 
+understood and cited by AI systems like ChatGPT, Perplexity, and 
+Google AI Overviews.
+
+[Rest of content...]
+```
+
+### Lead Paragraph Checklist
+
+- [ ] Answers the main question directly
+- [ ] Contains the most important information
+- [ ] Works as a standalone summary
+- [ ] Uses the main keyword naturally
+- [ ] Is concise (2-3 sentences max)
+
+## Lists and Data
+
+AI systems easily parse well-formatted lists:
+
+### Unordered Lists for Features/Items
+
+```markdown
+Key benefits of AEO include:
+
+- **Increased visibility** in AI search results
+- **Higher citation rates** from language models
+- **Better brand recognition** through AI mentions
+- **Future-proofed content** strategy
+```
+
+### Ordered Lists for Processes
+
+```markdown
+To implement AEO, follow these steps:
+
+1. **Audit current content** for AI readability
+2. **Add structured data** (Schema.org, JSON-LD)
+3. **Create llms.txt** file at site root
+4. **Optimize content structure** with clear headings
+5. **Monitor and iterate** based on results
+```
+
+### Definition Lists
+
+```html
+<dl>
+  <dt>AEO</dt>
+  <dd>Answer Engine Optimization - optimizing for AI search</dd>
+  
+  <dt>LLM</dt>
+  <dd>Large Language Model - AI systems that understand text</dd>
+  
+  <dt>RAG</dt>
+  <dd>Retrieval Augmented Generation - AI using external data</dd>
+</dl>
+```
+
+## Tables for Comparisons
+
+Tables are highly parseable for AI:
+
+```markdown
+| Feature | Traditional SEO | AEO |
+|---------|-----------------|-----|
+| Goal | Ranking in SERP | Citation in answers |
+| Focus | Keywords | Meaning & structure |
+| Metric | Rankings | Citations |
+| Content | Click-optimized | Comprehension-optimized |
+```
+
+## Question-Answer Format
+
+Structure content to directly answer questions:
+
+```markdown
+## Frequently Asked Questions
+
+### What is the best way to implement AEO?
+
+The best approach is to start with structured data implementation,
+then optimize your content structure, and finally add an llms.txt
+file to explicitly guide AI systems.
+
+### How long does AEO take to show results?
+
+Results typically appear within 2-4 weeks as AI systems recrawl
+your content. However, competitive topics may take longer.
+```
+
+## Semantic HTML Elements
+
+Use HTML elements that convey meaning:
+
+| Element | Use For | AI Understanding |
+|---------|---------|------------------|
+| `<article>` | Main content | Primary content block |
+| `<section>` | Thematic grouping | Topic divisions |
+| `<header>` | Introductory content | Page/section intro |
+| `<nav>` | Navigation | Not main content |
+| `<aside>` | Related content | Secondary info |
+| `<footer>` | Footer content | Metadata, credits |
+| `<main>` | Main content area | Primary focus area |
+
+## Content Length Guidelines
+
+| Content Type | Recommended Length | Why |
+|--------------|-------------------|-----|
+| Definition pages | 500-1,000 words | Concise, focused |
+| How-to guides | 1,500-2,500 words | Comprehensive steps |
+| In-depth analysis | 2,500-4,000 words | Thorough coverage |
+| Reference docs | As needed | Complete information |
+
+<Note>
+  Quality matters more than length. A concise, well-structured 800-word article outperforms a rambling 3,000-word piece.
+</Note>
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/optimization/semantic-markup" arrow="right">
+    Semantic Markup
+  </Button>
+  <Button href="/optimization/schema" variant="outline">
+    Schema.org Guide
+  </Button>
+</div>
+

@@ -1,0 +1,82 @@
+export const metadata = {
+  title: 'API Accessibility',
+  description: 'Make your content accessible through APIs for AI systems that use structured data access.',
+  openGraph: {
+    title: 'API Accessibility | AEO.dev',
+    description: 'Make your content accessible through APIs for AI systems that use structured data access.',
+    url: 'https://aeo.dev/technical/api-accessibility',
+    siteName: 'AEO.dev',
+  },
+}
+
+# API Accessibility for AI
+
+Some AI systems access content through APIs rather than web crawling. Making your content API-accessible can improve AI integration and citation. {{ className: 'lead' }}
+
+## Content API
+
+Provide a simple API for your content:
+
+```javascript
+// GET /api/content/:slug
+{
+  "title": "Article Title",
+  "description": "Article description",
+  "content": "Full article content in markdown...",
+  "author": "Author Name",
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "url": "https://yoursite.com/articles/slug"
+}
+```
+
+## sitemap.xml as API
+
+Your sitemap can serve as a content discovery API:
+
+```xml
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yoursite.com/article-1</loc>
+    <lastmod>2026-01-05</lastmod>
+  </url>
+</urlset>
+```
+
+## RSS/Atom Feeds
+
+Feeds provide structured content access:
+
+```xml
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Your Site</title>
+  <link href="https://yoursite.com"/>
+  <entry>
+    <title>Article Title</title>
+    <link href="https://yoursite.com/article"/>
+    <content type="html">Content...</content>
+    <author><name>Author Name</name></author>
+    <published>2026-01-05T00:00:00Z</published>
+  </entry>
+</feed>
+```
+
+## Best Practices
+
+1. **Consistent URLs** — Use predictable URL patterns
+2. **Include metadata** — Title, description, author, dates
+3. **Provide full content** — Not just excerpts
+4. **Keep feeds updated** — Fresh content in feeds
+5. **Document access** — Reference in llms.txt
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/technical/performance" arrow="right">
+    Performance
+  </Button>
+  <Button href="/tools/mcp-server" variant="outline">
+    MCP Server
+  </Button>
+</div>
+

@@ -1,0 +1,191 @@
+export const metadata = {
+  title: 'Claude & Anthropic',
+  description: 'Learn how to optimize content for Claude, Anthropic\'s AI assistant known for nuanced understanding and thoughtful responses.',
+  openGraph: {
+    title: 'Claude & Anthropic | AEO.dev',
+    description: 'Learn how to optimize content for Claude, Anthropic\'s AI assistant known for nuanced understanding and thoughtful responses.',
+    url: 'https://aeo.dev/ai-search/claude',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'Claude & Anthropic' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# Claude & Anthropic
+
+Claude, developed by Anthropic, represents a thoughtful approach to AI assistance. With web browsing capabilities and integration into various products, optimizing for Claude is increasingly important. {{ className: 'lead' }}
+
+## Understanding Claude
+
+Claude is known for:
+
+- **Nuanced understanding** — Grasps context and subtlety well
+- **Thoughtful responses** — Considers multiple perspectives
+- **Safety focus** — Trained with Constitutional AI principles
+- **Honest uncertainty** — Acknowledges when it doesn't know
+
+## Claude's Web Capabilities
+
+Claude can access the web through:
+
+- Direct web browsing in Claude.ai
+- API integrations with tools
+- Enterprise deployments
+- Third-party applications
+
+## ClaudeBot Crawler
+
+Anthropic uses **ClaudeBot** for web indexing:
+
+```txt
+User-agent: ClaudeBot
+Allow: /
+```
+
+<Note>
+  ClaudeBot is used to train Claude and may also be used for real-time web access in future features.
+</Note>
+
+## How Claude Processes Content
+
+Claude excels at understanding:
+
+1. **Complex explanations** — Multi-step processes, technical concepts
+2. **Nuanced topics** — Areas with multiple valid perspectives
+3. **Long-form content** — Comprehensive guides and documentation
+4. **Contextual information** — Content that requires background understanding
+
+## Optimization Strategies for Claude
+
+### 1. Clear, Logical Structure
+
+Claude appreciates well-organized content:
+
+```markdown
+## Overview
+
+Brief introduction to the topic and what the reader will learn.
+
+## Background
+
+Essential context needed to understand the topic.
+
+## Core Concepts
+
+### Concept 1
+Detailed explanation with examples.
+
+### Concept 2
+Detailed explanation with examples.
+
+## Practical Application
+
+How to apply these concepts in real scenarios.
+
+## Considerations
+
+Important factors to keep in mind, including limitations.
+
+## Conclusion
+
+Summary and next steps.
+```
+
+### 2. Nuanced Explanations
+
+Claude values content that acknowledges complexity:
+
+```markdown
+## Understanding [Topic]
+
+[Topic] is generally understood as [definition], though interpretations
+vary across different contexts:
+
+- **In Context A**: [Topic] typically means [interpretation 1]
+- **In Context B**: It's more commonly associated with [interpretation 2]
+- **Historically**: The term originated from [background]
+
+It's worth noting that [important caveat or exception].
+```
+
+### 3. Expert Depth
+
+Provide the depth an expert would appreciate:
+
+```markdown
+## Technical Implementation
+
+For basic usage, [simple approach] works well. However, production
+environments often require additional considerations:
+
+### Performance Optimization
+[Detailed technical guidance]
+
+### Edge Cases
+[Handling unusual scenarios]
+
+### Best Practices
+[Expert recommendations with rationale]
+```
+
+### 4. Cited Sources
+
+Claude values well-sourced content:
+
+```markdown
+Research by [Institution] found that [finding] (Author, Year).
+This is consistent with earlier work by [Other researcher] who
+demonstrated [related finding].
+
+However, some studies suggest [alternative view] (Source), indicating
+that the relationship may be more complex than initially thought.
+```
+
+## Content Types Claude Values
+
+| Content Type | Why Claude Values It |
+|--------------|---------------------|
+| Technical documentation | Clarity and precision |
+| Academic content | Depth and citations |
+| Expert analysis | Nuanced perspectives |
+| Comprehensive guides | Thorough coverage |
+| Well-reasoned opinions | Clear argumentation |
+
+## Anthropic Enterprise
+
+Claude is increasingly used in enterprise settings:
+
+- **Internal search** — Company documentation
+- **Customer support** — Knowledge base access
+- **Research tools** — Information synthesis
+
+Ensure your content is optimized for these use cases if relevant to your audience.
+
+## Model Context Protocol (MCP)
+
+Anthropic has introduced the Model Context Protocol for structured AI integration:
+
+```json
+{
+  "type": "resource",
+  "uri": "https://yoursite.com/docs",
+  "name": "Documentation",
+  "description": "Complete technical documentation"
+}
+```
+
+→ [Learn about MCP integration](/tools/mcp-server)
+
+## Measuring Claude Engagement
+
+Track Claude-driven interactions:
+
+- Monitor API usage if you offer Claude integrations
+- Check for ClaudeBot in server logs
+- Track referral traffic from claude.ai
+
+## Next Steps
+
+Continue with [Content Structure Guide](/optimization/content-structure) or [MCP Server Setup](/tools/mcp-server).
+

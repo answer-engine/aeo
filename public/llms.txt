@@ -1,0 +1,71 @@
+# llms.txt
+# Canonical structured entry point for LLMs
+# This file provides machine-readable information about this website for LLM ingestion
+
+# Site Information
+site_name: AEO.dev
+site_url: https://aeo.dev
+site_description: Answer Engine Optimization Knowledge Base - The complete guide to optimizing content for AI-powered search engines like ChatGPT, Perplexity, Google AI Overviews, and more.
+site_type: knowledge_base
+site_language: en
+
+# Contact
+contact_email: contact@aeo.dev
+contact_github: https://github.com/answer-engine/aeo
+slack_community: https://answer-engine.slack.com
+
+# Content Structure
+content_type: documentation, guides, tutorials, best_practices
+content_format: markdown
+content_license: permissive
+content_updated: 2026-01-05
+
+# Access Permissions
+search_engines: allow
+llm_inference: allow
+llm_training: allow
+rag_usage: allow
+web_scraping: allow
+api_access: allow
+
+# Entry Points
+primary_entry: https://aeo.dev
+documentation_root: https://aeo.dev
+quickstart: https://aeo.dev/quickstart
+ai_search_overview: https://aeo.dev/ai-search/overview
+optimization_guide: https://aeo.dev/optimization/content-structure
+
+# Sitemap
+sitemap_url: https://aeo.dev/sitemap.xml
+
+# Additional Resources
+github_repository: https://github.com/answer-engine/aeo
+chrome_extension: https://aeo.dev/tools/chrome-extension
+mcp_server: https://aeo.dev/tools/mcp-server
+
+# Content Sections
+sections:
+  - getting_started: https://aeo.dev/quickstart
+  - what_is_aeo: https://aeo.dev/what-is-aeo
+  - ai_search_engines: https://aeo.dev/ai-search/overview
+  - optimization: https://aeo.dev/optimization/content-structure
+  - technical: https://aeo.dev/technical/structured-data
+  - tools: https://aeo.dev/tools/chrome-extension
+  - resources: https://aeo.dev/resources/best-practices
+
+# Topic Coverage
+topics:
+  - Answer Engine Optimization (AEO)
+  - AI-powered search engines
+  - ChatGPT optimization
+  - Perplexity AI optimization
+  - Google AI Overviews (SGE)
+  - Structured data and Schema.org
+  - llms.txt standard
+  - Content optimization for AI
+  - Semantic markup
+  - JSON-LD implementation
+
+# Update Frequency
+update_frequency: weekly
+last_updated: 2026-01-05

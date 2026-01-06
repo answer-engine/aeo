@@ -1,0 +1,234 @@
+export const metadata = {
+  title: 'Measuring AEO Success',
+  description: 'Learn how to measure and track your Answer Engine Optimization performance with key metrics, analytics setup, and monitoring strategies.',
+  openGraph: {
+    title: 'Measuring AEO Success | AEO.dev',
+    description: 'Learn how to measure and track your Answer Engine Optimization performance with key metrics, analytics setup, and monitoring strategies.',
+    url: 'https://aeo.dev/measuring-success',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'Measuring AEO Success' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# Measuring AEO Success
+
+When it comes to LLMs and AI-driven searches, they often feel like black boxes—similar to how Google has long been perceived. However, there are still numerous ways to measure performance and track your AEO progress. {{ className: 'lead' }}
+
+## Are Traditional SEO Metrics Still Relevant?
+
+**Absolutely**—but as users transition to AI search and LLMs, it's crucial to adopt AEO-specific metrics alongside traditional ones. These metrics will prepare your organization for the future of search.
+
+## Key AEO Metrics
+
+### 1. Brand Visibility in AI Responses
+
+The primary goal of AEO is improving the visibility and ranking of your brand in AI searches—not just the links that lead to your website.
+
+**What to track:**
+
+- How often your brand is mentioned in AI responses
+- Position of your brand mention (first, second, etc.)
+- Context of mentions (positive, neutral, informational)
+- Competitor mentions in the same responses
+
+**Why it matters:**
+
+In traditional search, backlinks were the cornerstone metric. In AI search, the frequency and context of brand mentions within authoritative content becomes critical. Brands consistently referenced in reputable sources are more likely to be recognized and mentioned by AI models.
+
+### 2. Citation Link Tracking
+
+AI search engines increasingly include clickable source links in their responses. Track which of your pages are being cited.
+
+**What to track:**
+
+- Number of citation links to your domain
+- Which specific pages are cited most often
+- Position of your links in citation lists
+- Click-through rates from AI citations
+
+### 3. Referral Traffic from AI Platforms
+
+A key question: "How much of my site's traffic is originating from AI-driven searches?"
+
+**Traffic sources to monitor:**
+
+| Platform | Domain to Track |
+|----------|-----------------|
+| ChatGPT | chat.openai.com, chatgpt.com |
+| Perplexity | perplexity.ai |
+| Google AI | google.com (AI Overview clicks) |
+| Claude | claude.ai |
+| Bing AI | bing.com (Copilot) |
+
+### Setting Up AI Traffic Tracking in Google Analytics
+
+For Google Analytics GA4 and Looker Studio, create a custom channel group to track LLM traffic using this regex pattern:
+
+```text
+^.*ai|.*\.openai.*|.*copilot.*|.*chatgpt.*|.*gemini.*|.*gpt.*|.*perplexity.*|.*claude.*|.*anthropic.*$
+```
+
+**Steps:**
+
+1. Go to Admin → Data Display → Channel Groups
+2. Create a new channel group called "AI/LLM Traffic"
+3. Add the regex pattern to match AI referrers
+4. Apply to your reports
+
+### 4. Impact on Organic and Paid CTR
+
+Research shows significant impacts when AI Overviews appear:
+
+- **Paid CTR drops by 12%** when Google AI Overviews are shown
+- Organic CTR can drop significantly more
+- Both metrics should be monitored alongside AI traffic
+
+## Current Traffic Distribution
+
+Understanding the scale of AI search helps contextualize your metrics:
+
+**Monthly visits (approximate):**
+
+| Platform | Monthly Visits | Market Share vs Google |
+|----------|----------------|----------------------|
+| Google.com | 76 billion | 100% (baseline) |
+| ChatGPT.com | 4 billion | ~5% |
+| Perplexity.AI | 110 million | ~0.15% |
+
+**Growth trends:**
+
+| Platform | Growth Rate |
+|----------|-------------|
+| Google | Flat (0%) |
+| ChatGPT | 5-15% month-over-month |
+| Perplexity | 17-24% month-over-month |
+
+While AI search is still a fraction of Google's traffic, the growth rates are significant. ChatGPT alone directed traffic to **900,000 unique domains** in a single month.
+
+## Measuring Brand Visibility
+
+### Why Brand Visibility > Link Metrics
+
+In AI-driven search:
+
+1. **AI-generated answers are direct** — Users receive a single, authoritative response curated from widely recognized sources
+2. **Trust is built through recognition** — If a brand is repeatedly mentioned in expert discussions, AI models are more likely to recommend it
+3. **Voice search & AI assistants favor authority** — Platforms like Siri, Google Assistant, and Perplexity rely on brand visibility within their training data
+
+### Metrics to Track
+
+| Metric | Description | How to Measure |
+|--------|-------------|----------------|
+| Share of Voice | % of AI responses mentioning your brand vs competitors | Manual testing, monitoring tools |
+| Citation Frequency | How often your content is cited | Track referral traffic, manual audits |
+| Mention Position | Where your brand appears in responses | Manual testing |
+| Sentiment | How your brand is described | Qualitative analysis |
+
+## Building an AEO Dashboard
+
+Create a dashboard that tracks:
+
+### Traffic Metrics
+- [ ] Total AI referral traffic
+- [ ] Traffic by AI platform
+- [ ] AI traffic growth rate
+- [ ] Pages receiving AI traffic
+
+### Visibility Metrics
+- [ ] Brand mention frequency
+- [ ] Citation link count
+- [ ] Competitor comparison
+- [ ] Response position tracking
+
+### Engagement Metrics
+- [ ] AI referral conversion rate
+- [ ] Time on site from AI traffic
+- [ ] Bounce rate from AI traffic
+- [ ] Pages per session
+
+## Manual Testing Protocol
+
+Since AI responses can vary, establish a consistent testing protocol:
+
+### Weekly Testing
+
+1. **Select 10-20 key queries** related to your brand/industry
+2. **Test across multiple platforms:**
+   - ChatGPT (with browsing enabled)
+   - Perplexity AI
+   - Google (check for AI Overviews)
+   - Bing Copilot
+
+3. **Document for each query:**
+   - Was your brand mentioned?
+   - What position?
+   - Were competitors mentioned?
+   - What sources were cited?
+
+4. **Track changes over time** in a spreadsheet
+
+### Is Testing Worth It? (Yes!)
+
+A common question: "Is it worth investing time in optimizing AI results when responses seem to change frequently?"
+
+**Research findings:**
+
+- The brands appearing in AI search results don't change drastically between queries
+- While exact wording varies, top brands for a specific search prompt remain consistent
+- Citation links (sources) appear relatively stable over time
+- Although rankings may shift slightly, presence remains fairly constant
+
+**Conclusion:** AEO is not a waste of time. It's better to start optimizing sooner rather than later.
+
+## Understanding AI Response Variability
+
+Every response from an LLM is inherently unique. Parameters like "temperature" control model creativity and can influence outputs. However:
+
+- The core information tends to remain consistent
+- Brand recommendations stay relatively stable
+- Citation sources don't change dramatically
+
+This means monitoring general patterns is valuable, even if exact responses vary.
+
+## Tools for Measuring AEO
+
+### Analytics Platforms
+- Google Analytics 4 (with custom AI channel)
+- Adobe Analytics
+- Piwik/Matomo
+
+### SEO Tools (with AI Features)
+- SEMrush (AI Overview tracking)
+- Ahrefs (brand monitoring)
+- Moz (visibility tracking)
+
+### Manual Methods
+- Spreadsheet tracking
+- Regular query testing
+- Competitor monitoring
+
+## Setting Benchmarks
+
+Establish baseline metrics before heavy AEO investment:
+
+1. **Current AI referral traffic** — What % of traffic comes from AI platforms?
+2. **Brand mention rate** — Test 20 queries, how often are you mentioned?
+3. **Citation frequency** — How often is your content cited?
+4. **Competitor position** — Where do competitors rank vs you?
+
+Re-measure monthly to track progress.
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/resources/best-practices" arrow="right">
+    Best Practices
+  </Button>
+  <Button href="/tools/chrome-extension" variant="outline">
+    AEO Tools
+  </Button>
+</div>
+
+

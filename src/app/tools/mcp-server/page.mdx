@@ -1,0 +1,216 @@
+export const metadata = {
+  title: 'MCP Server',
+  description: 'Integrate AEO analysis into your development workflow with the AEO.dev Model Context Protocol server.',
+  openGraph: {
+    title: 'MCP Server | AEO.dev',
+    description: 'Integrate AEO analysis into your development workflow with the AEO.dev Model Context Protocol server.',
+    url: 'https://aeo.dev/tools/mcp-server',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AEO MCP Server' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# AEO MCP Server
+
+The AEO.dev Model Context Protocol (MCP) server integrates AEO analysis directly into AI assistants like Claude. Get AEO recommendations while you code. {{ className: 'lead' }}
+
+<Note>
+  The MCP server is currently in development. This page documents the planned functionality and API.
+</Note>
+
+## What is MCP?
+
+The [Model Context Protocol](https://modelcontextprotocol.io) is a standard developed by Anthropic for connecting AI assistants to external tools and data sources. With our MCP server, Claude and other MCP-compatible AI can:
+
+- Analyze your content for AEO readiness
+- Suggest structured data improvements
+- Generate Schema.org markup
+- Validate llms.txt files
+
+## Installation
+
+```bash
+npm install -g @aeo/mcp-server
+```
+
+## Configuration
+
+Add to your Claude desktop configuration:
+
+```json
+{
+  "mcpServers": {
+    "aeo": {
+      "command": "aeo-mcp-server",
+      "args": []
+    }
+  }
+}
+```
+
+## Available Tools
+
+### analyze_url
+
+Analyze a URL for AEO readiness:
+
+```
+Tool: analyze_url
+Input: { "url": "https://yoursite.com/page" }
+
+Output:
+{
+  "score": 75,
+  "breakdown": {
+    "content_structure": 80,
+    "structured_data": 65,
+    "machine_readability": 85,
+    "authority_signals": 70
+  },
+  "recommendations": [...]
+}
+```
+
+### generate_schema
+
+Generate Schema.org markup for content:
+
+```
+Tool: generate_schema
+Input: {
+  "type": "Article",
+  "content": {
+    "headline": "Article Title",
+    "description": "Article description",
+    "author": "Author Name"
+  }
+}
+
+Output:
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Article Title",
+  ...
+}
+```
+
+### validate_llms_txt
+
+Validate an llms.txt file:
+
+```
+Tool: validate_llms_txt
+Input: { "url": "https://yoursite.com/llms.txt" }
+
+Output:
+{
+  "valid": true,
+  "warnings": [
+    "Consider adding 'topics' field for better AI understanding"
+  ],
+  "suggestions": [...]
+}
+```
+
+### check_robots
+
+Check robots.txt for AI crawler access:
+
+```
+Tool: check_robots
+Input: { "url": "https://yoursite.com" }
+
+Output:
+{
+  "ai_crawlers": {
+    "GPTBot": "allowed",
+    "Google-Extended": "allowed",
+    "PerplexityBot": "blocked",
+    "ClaudeBot": "allowed"
+  },
+  "recommendations": [...]
+}
+```
+
+## Usage with Claude
+
+Once configured, ask Claude to analyze your AEO:
+
+> "Can you analyze the AEO readiness of my homepage at https://mysite.com?"
+
+Claude will use the MCP tools to:
+1. Fetch and analyze your page
+2. Check structured data implementation
+3. Validate llms.txt and robots.txt
+4. Provide recommendations
+
+### Example Conversation
+
+**You:** Can you check if my article page is optimized for AI search?
+
+**Claude:** I'll analyze your page for AEO readiness.
+
+*[Uses analyze_url tool]*
+
+Your page scores 68/100 for AEO. Here's the breakdown:
+
+- **Content Structure: 75/100** ✓ Good heading hierarchy
+- **Structured Data: 45/100** ⚠️ Missing Article schema
+- **Machine Readability: 80/100** ✓ llms.txt present
+- **Authority Signals: 72/100** ⚠️ Author info incomplete
+
+**Recommendations:**
+1. Add Article schema with JSON-LD
+2. Include author credentials and photo
+3. Add dateModified to existing metadata
+
+Would you like me to generate the Schema.org markup?
+
+## Development Integration
+
+Use the MCP server in your CI/CD pipeline:
+
+```yaml
+# .github/workflows/aeo-check.yml
+name: AEO Analysis
+on: [push]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install AEO MCP Server
+        run: npm install -g @aeo/mcp-server
+      - name: Analyze
+        run: aeo-analyze --url ${{ env.PREVIEW_URL }}
+```
+
+## Resources
+
+### Available Resources
+
+The MCP server exposes these resources:
+
+| URI | Description |
+|-----|-------------|
+| `aeo://docs/quickstart` | Quickstart guide |
+| `aeo://docs/schema` | Schema.org reference |
+| `aeo://docs/llms-txt` | llms.txt specification |
+| `aeo://templates/article` | Article schema template |
+| `aeo://templates/faq` | FAQ schema template |
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/tools/validator" arrow="right">
+    Online Validator
+  </Button>
+  <Button href="/optimization/schema" variant="outline">
+    Schema.org Guide
+  </Button>
+</div>
+

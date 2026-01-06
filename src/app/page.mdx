@@ -1,0 +1,212 @@
+import { Guides } from '@/components/Guides'
+import { Resources } from '@/components/Resources'
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'AEO.dev - Answer Engine Optimization Knowledge Base',
+  description: 'The complete knowledge base for Answer Engine Optimization (AEO). Learn how to optimize your content for AI-powered search engines like ChatGPT, Perplexity, Google AI Overviews, and more.',
+  openGraph: {
+    title: 'AEO.dev - Answer Engine Optimization Knowledge Base',
+    description: 'The complete knowledge base for Answer Engine Optimization (AEO). Learn how to optimize your content for AI-powered search engines.',
+    url: 'https://aeo.dev',
+    siteName: 'AEO.dev',
+    images: [
+      {
+        url: '/images/website.png',
+        width: 1200,
+        height: 630,
+        alt: 'AEO.dev - Answer Engine Optimization Knowledge Base',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AEO.dev - Answer Engine Optimization Knowledge Base',
+    description: 'The complete knowledge base for Answer Engine Optimization (AEO). Learn how to optimize your content for AI-powered search engines.',
+    images: ['/images/website.png'],
+  },
+}
+
+export const sections = [
+  { title: 'Guides', id: 'guides' },
+  { title: 'Features', id: 'features' },
+]
+
+<HeroPattern />
+
+# Answer Engine Optimization
+
+**AEO.dev** is your comprehensive knowledge base for Answer Engine Optimization. As AI-powered search engines transform how people find information, optimizing your content for these systems is no longer optional—it's essential. {{ className: 'lead' }}
+
+<div className="not-prose mt-6 mb-16 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    Get Started
+  </Button>
+  <Button href="/what-is-aeo" variant="outline">
+    What is AEO?
+  </Button>
+</div>
+
+## The Landscape is Changing {{ anchor: false }}
+
+Marketing teams face two major disruptions: **organic traffic from Google is declining** (with predictions of 50% decrease by 2028), and **new AI search platforms are emerging** with ChatGPT now among the top 10 websites globally. {{ className: 'lead' }}
+
+<Row>
+  <Col>
+    ### The Numbers
+    
+    - **60%** of searches are now zero-click
+    - **75%** of problem-solving queries show AI responses
+    - **4 billion** monthly ChatGPT visits
+    - **Up to 40%** traffic drops from AI Overviews
+  </Col>
+  <Col>
+    ### The Growth
+    
+    - Google traffic: **Flat (0%)**
+    - ChatGPT: **5-15% MoM growth**
+    - Perplexity: **17-24% MoM growth**
+    - AI market: **24-36% annual growth**
+  </Col>
+</Row>
+
+<div className="not-prose">
+  <Button href="/why-aeo-matters" variant="text" arrow="right">
+    See the full market analysis
+  </Button>
+</div>
+
+## Proven Optimization Methods {{ anchor: false }}
+
+Research testing over 10,000 search prompts identified which methods most improve AI visibility:
+
+<Row>
+  <Col>
+    ### Quotes & Statistics
+    
+    Adding citations, quotes, and statistics can improve visibility by **30-40%**. AI systems prioritize citable, evidence-backed content.
+    
+    → [Implementation guide](/strategies/quotes-statistics)
+  </Col>
+  <Col>
+    ### Wikipedia Presence
+    
+    Wikipedia has **5x weight** in training data and accounts for **~10%** of AI citations. Build eligibility and leverage this critical platform.
+    
+    → [Wikipedia strategy](/strategies/wikipedia)
+  </Col>
+</Row>
+
+<Row>
+  <Col>
+    ### Reddit Engagement
+    
+    Reddit is the **#1 cited domain** in AI search (~32% of citations). Reddit content is licensed for LLM training. Authentic participation matters.
+    
+    → [Reddit strategy](/strategies/reddit)
+  </Col>
+  <Col>
+    ### Technical Foundation
+    
+    Schema.org markup, llms.txt, and proper crawler access ensure AI systems can find and understand your content.
+    
+    → [Technical guide](/optimization/schema)
+  </Col>
+</Row>
+
+## AI Search Platforms {{ anchor: false }}
+
+Understand how each platform works and optimize accordingly:
+
+<Row>
+  <Col>
+    ### ChatGPT Search
+    
+    - ~4 billion monthly visits
+    - Uses Bing index for web results
+    - ~50% of queries trigger search
+    - Strong growth trajectory
+    
+    → [ChatGPT guide](/ai-search/chatgpt)
+  </Col>
+  <Col>
+    ### Google AI Overviews
+    
+    - 30% of searches show AIOs
+    - 75% of problem-solving queries
+    - E-E-A-T signals matter
+    - Correlates with traditional SEO
+    
+    → [Google AI guide](/ai-search/google-ai)
+  </Col>
+</Row>
+
+<Row>
+  <Col>
+    ### Perplexity AI
+    
+    - Research-focused platform
+    - Strong citation integration
+    - 17-24% MoM growth
+    - Academic content performs well
+    
+    → [Perplexity guide](/ai-search/perplexity)
+  </Col>
+  <Col>
+    ### Claude & Others
+    
+    - Internal knowledge focus
+    - MCP protocol for integrations
+    - Gemini, Grok, DeepSeek
+    - Long-term brand positioning
+    
+    → [Claude guide](/ai-search/claude)
+  </Col>
+</Row>
+
+## Traditional SEO Still Matters {{ anchor: false }}
+
+Research found a **strong correlation (~0.65)** between Google page 1 rankings and LLM brand mentions. Your SEO work directly supports your AEO efforts. {{ className: 'lead' }}
+
+Continue investing in traditional SEO while adding AEO-specific strategies. The two disciplines complement each other.
+
+<div className="not-prose">
+  <Button href="/strategies/overview" variant="text" arrow="right">
+    All optimization strategies
+  </Button>
+</div>
+
+## Measuring Success {{ anchor: false }}
+
+Track the right metrics to measure AEO progress:
+
+<Row>
+  <Col>
+    ### Visibility Metrics
+    
+    - Brand mention frequency
+    - Citation link count
+    - Response position
+    - Share of voice vs competitors
+  </Col>
+  <Col>
+    ### Traffic Metrics
+    
+    - AI referral traffic
+    - Traffic by AI platform
+    - Conversion rates from AI
+    - Growth over time
+  </Col>
+</Row>
+
+<div className="not-prose">
+  <Button href="/measuring-success" variant="text" arrow="right">
+    Full measurement guide
+  </Button>
+</div>
+
+<Guides />
+
+<Resources />

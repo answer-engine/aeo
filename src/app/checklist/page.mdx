@@ -1,0 +1,212 @@
+export const metadata = {
+  title: 'AEO Checklist',
+  description: 'Complete Answer Engine Optimization checklist covering content, technical implementation, authority building, and measurement.',
+  openGraph: {
+    title: 'AEO Checklist | AEO.dev',
+    description: 'Complete Answer Engine Optimization checklist covering content, technical implementation, authority building, and measurement.',
+    url: 'https://aeo.dev/checklist',
+    siteName: 'AEO.dev',
+    images: [{ url: '/images/website.png', width: 1200, height: 630, alt: 'AEO Checklist' }],
+    locale: 'en_US',
+    type: 'article',
+  },
+}
+
+# AEO Checklist
+
+A comprehensive checklist to ensure your Answer Engine Optimization implementation is complete. Use this to audit your current state and track progress. {{ className: 'lead' }}
+
+## Entity Audit
+
+Understanding how AI perceives your brand is the foundation of AEO.
+
+- [ ] **Audit brand entities** — Understand how your brand is perceived by LLMs
+- [ ] **Test AI perception** — Query multiple AI platforms about your brand
+- [ ] **Identify entity gaps** — Find topics you should be associated with but aren't
+- [ ] **Document competitor entities** — Understand how competitors are perceived
+- [ ] **Map entity relationships** — Understand connections between your brand and topics
+
+### Tools for Entity Research
+- Google's Natural Language API
+- Entity analysis tools
+- Manual AI platform testing
+
+## Technical SEO for AI
+
+Ensure AI crawlers can access and understand your content.
+
+### Crawler Access
+- [ ] **AI bot indexing enabled** — Check robots.txt allows GPTBot, ClaudeBot, PerplexityBot
+- [ ] **No blocking of AI crawlers** — Verify no unintended blocks
+- [ ] **Sitemap accessible** — XML sitemap is current and accessible
+- [ ] **llms.txt implemented** — File exists at site root with complete information
+
+### Content Accessibility
+- [ ] **Dynamic content readable** — AI crawlers can access JavaScript-rendered content
+- [ ] **Schema markup crawlable** — Structured data not blocked by JS requirements
+- [ ] **Page load optimized** — Fast loading for crawler efficiency
+- [ ] **HTML structure clean** — Semantic markup throughout
+
+### Structured Data
+- [ ] **WebSite schema** — Implemented on homepage
+- [ ] **Organization schema** — Brand information marked up
+- [ ] **Article/BlogPosting schema** — On all content pages
+- [ ] **FAQPage schema** — On FAQ content
+- [ ] **HowTo schema** — On instructional content
+- [ ] **Product schema** — On product pages (if applicable)
+- [ ] **JSON-LD format** — Using recommended format
+- [ ] **Schema validation** — All schemas pass validation
+
+## Content Optimization
+
+Optimize your owned content for AI comprehension and citation.
+
+### Structure & Format
+- [ ] **Clear heading hierarchy** — H1 → H2 → H3 without skipping
+- [ ] **Semantic HTML** — Using article, section, header, etc.
+- [ ] **Lead paragraph optimization** — Key information in first paragraph
+- [ ] **Question-answer format** — Where appropriate
+- [ ] **Scannable formatting** — Lists, tables, clear sections
+
+### Authority Signals
+- [ ] **Author information** — Clear attribution on content
+- [ ] **Author credentials** — Expertise demonstrated
+- [ ] **Publication dates** — Clear timestamps
+- [ ] **Update dates** — When content is refreshed
+- [ ] **Source citations** — References to authoritative sources
+
+### Quotes & Statistics
+- [ ] **Expert quotes included** — 2-3 per major piece
+- [ ] **Relevant statistics** — 3-5 per major piece
+- [ ] **Proper citations** — Sources attributed
+- [ ] **Recent data** — Using current statistics
+- [ ] **Natural integration** — Evidence flows with content
+
+### Readability
+- [ ] **Fluency optimized** — Clear, smooth writing
+- [ ] **Accessible language** — Appropriate complexity level
+- [ ] **No keyword stuffing** — Natural language use
+- [ ] **Comprehensive coverage** — Topics covered thoroughly
+
+## Public Relations & Authority
+
+Build the external signals that influence AI perception.
+
+### Media Presence
+- [ ] **PR strategy aligned with AEO** — Agency/team understands AI search
+- [ ] **Topic association campaigns** — Active efforts to build associations
+- [ ] **Expert positioning** — Leadership positioned as authorities
+- [ ] **News coverage** — Regular, relevant media mentions
+
+### Wikipedia
+- [ ] **Wikipedia eligibility assessed** — Understand if you qualify
+- [ ] **Notability documented** — Evidence of coverage collected
+- [ ] **Wikipedia page exists** — If eligible
+- [ ] **Wikipedia page accurate** — Information is current
+- [ ] **Wikipedia mentions** — Mentioned on related pages if no dedicated page
+
+### Third-Party Mentions
+- [ ] **Industry publication coverage** — Regular mentions
+- [ ] **Academic citations** — If applicable
+- [ ] **Analyst coverage** — Industry analyst mentions
+- [ ] **Partnership announcements** — Strategic partnerships publicized
+
+## Community Marketing
+
+Build presence where AI learns about brands.
+
+### Reddit
+- [ ] **Relevant subreddits identified** — Know where your audience is
+- [ ] **Authentic participation** — Contributing value, not just promoting
+- [ ] **Content strategy** — Plan for posts and engagement
+- [ ] **Brand monitoring** — Tracking mentions and sentiment
+
+### Forums & Communities
+- [ ] **Industry forums identified** — Know relevant communities
+- [ ] **Active participation** — Contributing expertise
+- [ ] **Reputation building** — Established as helpful contributor
+
+### User-Generated Content
+- [ ] **Customer reviews encouraged** — Building social proof
+- [ ] **Case studies published** — Customer success stories
+- [ ] **Testimonials collected** — Authentic user voices
+- [ ] **Community content supported** — Enabling user contributions
+
+## Measurement & Monitoring
+
+Track progress and optimize based on data.
+
+### Traffic Tracking
+- [ ] **AI referral tracking set up** — GA4/analytics configured
+- [ ] **Channel grouping configured** — LLM traffic segmented
+- [ ] **Referrer identification** — Tracking specific AI platforms
+- [ ] **Baseline established** — Know starting point
+
+### Visibility Monitoring
+- [ ] **Brand mention tracking** — Regular AI platform testing
+- [ ] **Competitor monitoring** — Tracking competitor visibility
+- [ ] **Citation tracking** — Monitoring where you're cited
+- [ ] **Topic association tracking** — Monitoring perceived expertise
+
+### Regular Audits
+- [ ] **Weekly query testing** — Testing key queries on AI platforms
+- [ ] **Monthly visibility reports** — Tracking trends over time
+- [ ] **Quarterly strategy review** — Adjusting based on results
+
+## Avoid These Mistakes
+
+Critical items to NOT do.
+
+- [ ] **No Black Hat tactics** — No prompt injection, manipulation, etc.
+- [ ] **No AI crawler blocking** — Unless intentional with clear reasoning
+- [ ] **No promotional Wikipedia editing** — Following Wikipedia guidelines
+- [ ] **No Reddit astroturfing** — Authentic participation only
+- [ ] **No outdated statistics** — Keeping data current
+- [ ] **No keyword stuffing** — Natural language only
+
+## Priority Implementation Order
+
+If starting from scratch, implement in this order:
+
+### Week 1: Foundation
+1. [ ] Set up AI traffic tracking
+2. [ ] Audit current AI visibility
+3. [ ] Create llms.txt file
+4. [ ] Review robots.txt for AI access
+
+### Week 2: Technical
+1. [ ] Implement WebSite schema
+2. [ ] Implement Organization schema
+3. [ ] Add Article schema to key pages
+4. [ ] Validate all structured data
+
+### Week 3: Content
+1. [ ] Audit top content for structure
+2. [ ] Add expert quotes to key pages
+3. [ ] Add statistics to key pages
+4. [ ] Optimize heading hierarchy
+
+### Week 4: Authority
+1. [ ] Assess Wikipedia eligibility
+2. [ ] Identify relevant subreddits
+3. [ ] Plan PR strategy alignment
+4. [ ] Set up regular monitoring
+
+### Ongoing
+1. [ ] Weekly AI query testing
+2. [ ] Monthly content optimization
+3. [ ] Quarterly strategy review
+4. [ ] Continuous community engagement
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/quickstart" arrow="right">
+    Quickstart Guide
+  </Button>
+  <Button href="/strategies/overview" variant="outline">
+    All Strategies
+  </Button>
+</div>
+
+

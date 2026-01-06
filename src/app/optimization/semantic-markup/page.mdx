@@ -1,0 +1,115 @@
+export const metadata = {
+  title: 'Semantic Markup',
+  description: 'Learn how to use semantic HTML to improve AI understanding of your content structure and meaning.',
+  openGraph: {
+    title: 'Semantic Markup | AEO.dev',
+    description: 'Learn how to use semantic HTML to improve AI understanding of your content structure and meaning.',
+    url: 'https://aeo.dev/optimization/semantic-markup',
+    siteName: 'AEO.dev',
+  },
+}
+
+# Semantic Markup for AEO
+
+Semantic HTML helps AI systems understand the structure and meaning of your content beyond just the text. This guide covers how to implement semantic markup effectively. {{ className: 'lead' }}
+
+## What is Semantic HTML?
+
+Semantic HTML uses elements that convey meaning about the content they contain, rather than just how it should look.
+
+```html
+<!-- Non-semantic (AI has to guess) -->
+<div class="article">
+  <div class="title">Page Title</div>
+  <div class="content">Content here...</div>
+</div>
+
+<!-- Semantic (AI understands structure) -->
+<article>
+  <header>
+    <h1>Page Title</h1>
+  </header>
+  <p>Content here...</p>
+</article>
+```
+
+## Key Semantic Elements
+
+| Element | Purpose | AI Understanding |
+|---------|---------|------------------|
+| `<article>` | Self-contained content | Main content block |
+| `<section>` | Thematic grouping | Topic division |
+| `<header>` | Introductory content | Page/section intro |
+| `<footer>` | Footer information | Metadata, credits |
+| `<nav>` | Navigation links | Not main content |
+| `<aside>` | Tangentially related | Secondary content |
+| `<main>` | Main content area | Primary focus |
+| `<figure>` | Self-contained media | Illustration content |
+
+## Implementation Pattern
+
+```html
+<body>
+  <header>
+    <nav><!-- Site navigation --></nav>
+  </header>
+  
+  <main>
+    <article>
+      <header>
+        <h1>Article Title</h1>
+        <p class="lead">Summary...</p>
+        <time datetime="2026-01-05">January 5, 2026</time>
+      </header>
+      
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Content...</p>
+      </section>
+      
+      <section id="main-content">
+        <h2>Main Topic</h2>
+        <p>Content...</p>
+        
+        <figure>
+          <img src="diagram.png" alt="Descriptive alt text">
+          <figcaption>Figure 1: Description of diagram</figcaption>
+        </figure>
+      </section>
+      
+      <aside>
+        <h3>Related Resources</h3>
+        <!-- Related links -->
+      </aside>
+      
+      <footer>
+        <p>Author: Jane Smith</p>
+      </footer>
+    </article>
+  </main>
+  
+  <footer>
+    <!-- Site footer -->
+  </footer>
+</body>
+```
+
+## Best Practices
+
+1. **Use `<article>` for main content** — Wraps self-contained content
+2. **Use `<section>` for divisions** — Group related content with headings
+3. **Add `id` attributes** — Enable deep linking and navigation
+4. **Use `<time>` for dates** — Machine-readable dates with `datetime` attribute
+5. **Add alt text to images** — Describe images for AI understanding
+
+## Next Steps
+
+<div className="not-prose mt-6 flex gap-3">
+  <Button href="/optimization/schema" arrow="right">
+    Schema.org Guide
+  </Button>
+  <Button href="/optimization/content-structure" variant="outline">
+    Content Structure
+  </Button>
+</div>
+

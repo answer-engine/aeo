@@ -1,0 +1,128 @@
+backend:
+  name: github
+  repo: answer-engine/aeo
+  branch: main
+  base_url: https://aeo.dev
+  auth_endpoint: /api/auth
+
+# For local development, use test-repo backend
+# backend:
+#   name: test-repo
+
+# Publish mode for editorial workflow (creates PRs instead of direct commits)
+publish_mode: editorial_workflow
+
+# Media files configuration
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+# Site URL
+site_url: https://aeo.dev
+display_url: https://aeo.dev
+
+# Logo
+logo_url: /images/logos/logo.svg
+
+# Collections (content types)
+collections:
+  # AI Search Engines section
+  - name: ai-search
+    label: "AI Search Engines"
+    label_singular: "AI Search Guide"
+    folder: src/app/ai-search
+    create: true
+    nested:
+      depth: 2
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Optimization Strategies section
+  - name: optimization
+    label: "Optimization Strategies"
+    label_singular: "Optimization Guide"
+    folder: src/app/optimization
+    create: true
+    nested:
+      depth: 2
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Strategies section
+  - name: strategies
+    label: "Strategies"
+    label_singular: "Strategy"
+    folder: src/app/strategies
+    create: true
+    nested:
+      depth: 2
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Technical Implementation section
+  - name: technical
+    label: "Technical Implementation"
+    label_singular: "Technical Guide"
+    folder: src/app/technical
+    create: true
+    nested:
+      depth: 2
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Resources section
+  - name: resources
+    label: "Resources"
+    label_singular: "Resource"
+    folder: src/app/resources
+    create: true
+    nested:
+      depth: 2
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Community Contributions (for new content submissions)
+  - name: contributions
+    label: "Community Contributions"
+    label_singular: "Contribution"
+    folder: src/app/contributions
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "AI Search Engines", value: "ai-search" }
+          - { label: "Optimization", value: "optimization" }
+          - { label: "Strategies", value: "strategies" }
+          - { label: "Technical", value: "technical" }
+          - { label: "Case Study", value: "case-study" }
+          - { label: "Other", value: "other" }
+      - { label: "Author Name", name: "author", widget: "string" }
+      - { label: "Author GitHub (optional)", name: "author_github", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
